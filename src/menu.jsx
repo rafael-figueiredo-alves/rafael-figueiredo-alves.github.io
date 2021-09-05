@@ -9,18 +9,12 @@ function MainMenu(){
                 <IconButton edge="start" color="inherit" aria-label="Menu">
                     <MenuIcon />
                 </IconButton>
-                <Typography edge="start" variant="h6" style={{flexGrow: 1}}>
+                <Typography variant="h6">
                    
                 </Typography>
                 <Button color="inherit">Login</Button>
                 <Button color="inherit">Login</Button>
-                <Button color="inherit">Login</Button>
-                <Button color="inherit">Login</Button>
-                <Button color="inherit">Login</Button>
-                <Button color="inherit">Login</Button>
-                <Button color="inherit">Login</Button>
-                <Button color="inherit">Login</Button>
-                <Button color="inherit">Login</Button>
+                <Button variant="contained" color="secondary">Login</Button>
             </Toolbar>
         </AppBar>    
     </div>
