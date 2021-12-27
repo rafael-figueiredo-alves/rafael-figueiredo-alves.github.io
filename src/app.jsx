@@ -3,7 +3,7 @@ import MainMenu from './menu';
 
 function App(){
     return <div>
-             <MainMenu />
+             <h1>Portfólio do Rafael Alves</h1>
            </div>
 }
 
