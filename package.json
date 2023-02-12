@@ -2,7 +2,7 @@
   "name": "rafael-figueiredo-alves.github.io",
   "private": false,
   "version": "1.0.0",
-  "homepage": "https://rafael-figueiredo-alves.github.io/"
+  "homepage": "https://rafael-figueiredo-alves.github.io/",
   "type": "module",
   "scripts": {
     "dev": "vite",
