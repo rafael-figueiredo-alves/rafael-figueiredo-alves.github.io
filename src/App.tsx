@@ -1,27 +1,31 @@
-import { AppBar, Paper, SvgIcon } from '@mui/material';
-import Container from '@mui/material/Container';
-import Toolbar from '@mui/material/Toolbar';
-import Box from '@mui/material/Box';
-import CssBaseline from '@mui/material/CssBaseline';
-import DevPegasusLogo from './assets/DevPegasus-Logo.svg'
+import { useState } from 'react'
+import Logo from '/logo.png'
+
+import './App.css'
 
 function App() {
+  const [count, setCount] = useState(0)
+
   return (
     <>
-    <Box sx={{ display: 'flex' }}>
-    <CssBaseline /> 
-    <AppBar component="nav" position='sticky'>
-      <Toolbar disableGutters>
-        
-      </Toolbar> 
-    </AppBar>
-    </Box>
-    <Paper color='#0B192F' square sx={{ pb: '50px' }}>
-    <Box component="main" sx={{ p: 3 }}>
-
-    </Box>
-    </Paper>
-    </> 
+      <div>
+        <a href="https://github.com/rafael-figueiredo-alves" target="_blank">
+          <img src={Logo} className="logo" alt="LogoRafael" />
+        </a>
+      </div>
+      <h1>Portfólio "Rafael de Figueiredo Alves"</h1>
+      <div className="card">
+        <button className='btn btn-primary' onClick={() => setCount((count) => count + 1)}>
+          Contando ... {count}
+        </button>
+        <p>
+          Edite <code>src/App.tsx</code> e salve para testar HMR
+        </p>
+      </div>
+      <p>
+        Página em construção...
+      </p>
+    </>
   )
 }
 
