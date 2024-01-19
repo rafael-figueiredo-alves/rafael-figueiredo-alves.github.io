@@ -1,10 +1,10 @@
-import { useState } from 'react'
+
 import Logo from '/logo.png'
 
 import './App.css'
+import CountButton from './components/CountButton'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
@@ -15,9 +15,7 @@ function App() {
       </div>
       <h1>Portfólio "Rafael de Figueiredo Alves"</h1>
       <div className="card">
-        <button className='btn btn-primary' onClick={() => setCount((count) => count + 1)}>
-          Contando ... {count}
-        </button>
+        <CountButton Inicio={10} />
         <p>
           Edite <code>src/App.tsx</code> e salve para testar HMR
         </p>
