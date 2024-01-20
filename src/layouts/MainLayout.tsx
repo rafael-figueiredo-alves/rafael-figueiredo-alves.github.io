@@ -1,10 +1,11 @@
 
 import Logo from '/logo.png'
 
-import './App.css'
-import CountButton from './components/CountButton'
+import './MainLayout.css'
+import CountButton from '../components/CountButton'
+import { Link, Outlet } from 'react-router-dom'
 
-function App() {
+function MainLayout() {
 
   return (
     <>
@@ -22,9 +23,11 @@ function App() {
       </div>
       <p>
         Página em construção...
+        <Link to="/contacts">Contatos</Link>
+        <Outlet />
       </p>
     </>
   )
 }
 
-export default App
+export default MainLayout
