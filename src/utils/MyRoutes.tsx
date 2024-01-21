@@ -3,10 +3,14 @@
 import { createBrowserRouter } from "react-router-dom";
 
 //<---Imports das páginas/layouts do sistema -->
-import Home from "../pages/Home";
-import ErroPage from "../pages/ErroPage";
+import PageHome from "../pages/PageHome";
+import PageError from "../pages/PageError";
 import MainLayout from "../layouts/MainLayout";
-import Contacts from "../pages/Contacts";
+import PageContacts from "../pages/PAgeContacts";
+import PageLanguagesAndFrameworks from "../pages/PageLanguagesAndFrameworks";
+import PageTools from "../pages/PageTools";
+import PageExperience from "../pages/PageExperience";
+import PageAbout from "../pages/PageAbout";
 
 
 //<--- Criador e gerenciador das Rotas do sistema --->
@@ -14,15 +18,31 @@ const MyRoutes = createBrowserRouter([
     {
         path: "/",
         element: <MainLayout />,
-        errorElement: <ErroPage />,
+        errorElement: <PageError />, 
         children: [
             {
                 path: "/",
-                element: <Home />
+                element: <PageHome />
             },
             {
                 path: "/contacts",
-                element: <Contacts />
+                element: <PageContacts />
+            },
+            {
+                path: "/langagesandframeworks",
+                element: <PageLanguagesAndFrameworks />
+            },
+            {
+                path: "/tools",
+                element: <PageTools />
+            },
+            {
+                path: "/experience",
+                element: <PageExperience />
+            },
+            {
+                path: "/about",
+                element: <PageAbout />
             }
         ],
     },

@@ -1,7 +1,7 @@
 
 import Logo from '/logo.png'
 
-import './MainLayout.css'
+//import './MainLayout.css'
 import CountButton from '../components/CountButton'
 import { Link, Outlet } from 'react-router-dom'
 
