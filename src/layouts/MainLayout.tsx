@@ -26,6 +26,17 @@ function MainLayout() {
         <Link to="/contacts">Contatos</Link>
         <Outlet />
       </p>
+
+{/*       <div className='Container-fluid'>
+        <div className='Row'>
+          <div className='d-none d-md-table-cell col-xs-3 col-sm-3'>
+              <p>Sidebar aqui</p>
+          </div>
+          <div className='col-12 col-md-9'>
+              <p>Conteúdo principal</p>
+          </div>
+        </div>
+      </div> */}
     </>
   )
 }
