@@ -2,6 +2,7 @@
 import { Outlet } from 'react-router-dom'
 import { NavBar } from '../components/NavBar'
 import { LanguageButton } from '../components/LanguageButton'
+import { Sidebar } from '../components/Sidebar'
 
 function MainLayout() {
 
@@ -13,7 +14,7 @@ function MainLayout() {
           <div className="d-none d-md-table-cell col-md-5 col-lg-4 col-xl-3 px-sm-2 px-0 d-flex sticky-top row-height" style={{ backgroundColor: '#336699' }}>
             <div className="d-flex flex-sm-column flex-row flex-grow-1 align-items-center align-items-sm-start px-3 pt-2 text-white row-height">
               <div className='d-none d-md-inline'>
-                Mostrando sidebar em telas médias a grandes
+                <Sidebar />
               </div>
             </div>
           </div>
