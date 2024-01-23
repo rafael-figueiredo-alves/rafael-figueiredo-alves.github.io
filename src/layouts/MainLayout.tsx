@@ -1,9 +1,7 @@
-
-import Logo from '/logo.png'
-
 //import './MainLayout.css'
-import CountButton from '../components/CountButton'
-import { Link, Outlet } from 'react-router-dom'
+import { Outlet } from 'react-router-dom'
+import { NavBar } from '../components/NavBar'
+import { LanguageButton } from '../components/LanguageButton'
 
 function MainLayout() {
 
@@ -22,13 +20,11 @@ function MainLayout() {
           {/* Conteúdo principal da página */}
           <div className="col d-flex flex-column h-sm-100">
             <main className="row overflow-auto">
-              <nav className="navbar d-inline d-md-none py-3 fixed-top" style={{ backgroundColor: '#336699', color: 'white', position: 'absolute', backgroundBlendMode: 'normal', boxShadow: '0px 2px 4px -1px rgba(0,0,0,0.2),0px 1px 10px rgba(0,0,0,0.12),0px 4px 5px rgba(0,0,0,0.14)'  }}>
-                <div className="container-fluid">
-                  <span className="navbar-brand mb-0 h1">Navbar</span>
+              <NavBar />
+              <div className='col d-none d-md-inline'>
+                <div className='container-fluid justify-content-end mt-3 text-end'>
+                  <LanguageButton />
                 </div>
-              </nav>
-              <div className='row d-none d-md-inline'>
-                Teste
               </div>
               <Outlet />
               <div className="col pt-4">
