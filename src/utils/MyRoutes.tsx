@@ -6,7 +6,7 @@ import { createBrowserRouter } from "react-router-dom";
 import PageHome from "../pages/PageHome";
 import PageError from "../pages/PageError";
 import MainLayout from "../layouts/MainLayout";
-import PageContacts from "../pages/PAgeContacts";
+import PageContacts from "../pages/PageContacts";
 import PageLanguagesAndFrameworks from "../pages/PageLanguagesAndFrameworks";
 import PageTools from "../pages/PageTools";
 import PageExperience from "../pages/PageExperience";

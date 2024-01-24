@@ -6,7 +6,7 @@ export const Offcanvas = () => {
             <div className="offcanvas-header justify-content-end" data-bs-theme="dark">
                 <button type="button" style={{color: 'white'}} className="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
-            <div className="offcanvas-body">
+            <div className="offcanvas-body" style={{marginTop: -60}}>
                 {/* Inserir aqui o componente sidebar para inserir o conteúdo */}
                 <Sidebar />
             </div>

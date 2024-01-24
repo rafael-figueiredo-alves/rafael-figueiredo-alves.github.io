@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path d="M-12 -342L-12 -342L-12 -318L-36 -318L-36 -342L-12 -342Z" id="path_1" />
+    <clipPath id="clip_1">
+      <use xlink:href="#path_1" clip-rule="evenodd" fill-rule="evenodd" />
+    </clipPath>
+  </defs>
+  <g id="Gmail Logo">
+    <path d="M-12 -342L-12 -342L-12 -318L-36 -318L-36 -342L-12 -342Z" id="Gmail-Logo" fill="none" stroke="none" />
+    <path d="M20 19L4 19L4 7L12 12L20 7L20 19Z" id="Shape" fill="#FFFFFF" fill-opacity="0.3" stroke="none" clip-path="url(#clip_1)" />
+    <path d="M20 19L4 19L4 7L12 12L20 7L20 19Z" id="Shape" fill="#FFFFFF" fill-opacity="0.3" stroke="none" clip-path="url(#clip_1)" />
+    <path d="M20 4L4 4C2.895 4 2 4.895 2 6L2 18C2 19.105 2.895 20 4 20L20 20C21.105 20 22 19.105 22 18L22 6C22 4.895 21.105 4 20 4L20 4ZM19 18L5 18L5 6L19 6L19 18L19 18Z" id="Shape" fill="#FFFFFF" fill-rule="evenodd" stroke="none" clip-path="url(#clip_1)" />
+    <path d="M20 4L4 4C2.895 4 2 4.895 2 6L2 18C2 19.105 2.895 20 4 20L20 20C21.105 20 22 19.105 22 18L22 6C22 4.895 21.105 4 20 4L20 4ZM19 18L5 18L5 6L19 6L19 18L19 18Z" id="Shape" fill="#FFFFFF" fill-rule="evenodd" stroke="none" clip-path="url(#clip_1)" />
+    <path d="M3 7.376L12 13L21 7.376L21 4.376L12 10L3 4.376L3 7.376Z" id="Shape" fill="#FFFFFF" stroke="none" clip-path="url(#clip_1)" />
+    <path d="M3 7.376L12 13L21 7.376L21 4.376L12 10L3 4.376L3 7.376Z" id="Shape" fill="#FFFFFF" stroke="none" clip-path="url(#clip_1)" />
+  </g>
+</svg>
