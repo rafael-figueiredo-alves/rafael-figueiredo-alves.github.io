@@ -1,4 +1,4 @@
-//import './MainLayout.css'
+import './MainLayout.css'
 import { Outlet } from 'react-router-dom'
 import { NavBar } from '../components/NavBar'
 import { LanguageButton } from '../components/LanguageButton'
@@ -21,16 +21,15 @@ function MainLayout() {
           
           {/* Conteúdo principal da página */}
           <div className="col d-flex flex-column h-sm-100">
-            <main className="row overflow-auto">
-              
-              <NavBar />
-
               {/* Barra com botão de idioma quando tela maior que 768px */}
               <div className='col-12 d-none d-md-inline'>
                 <div className='container-fluid justify-content-end mt-3 text-end'>
                   <LanguageButton />
                 </div>
-              </div>
+              </div>            
+            <main className="row overflow-auto">
+              
+              <NavBar />
 
               {/* Elemento para dar espaçamento entre a navbar e o conteúdo*/}
               <div className='col-12 d-inline d-md-none mt-3' style={{height: 50}} />

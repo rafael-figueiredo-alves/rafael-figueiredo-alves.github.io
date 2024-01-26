@@ -1,3 +1,4 @@
+import '/src/components/LanguageButton.css'
 import { useState } from 'react'
 import BtnEnglish from '/MeusProjetos/rafael-figueiredo-alves.github.io/src/assets/BtnEnglish.svg'
 import BtnPortugues from '/MeusProjetos/rafael-figueiredo-alves.github.io/src/assets/BtnPortugues.svg'
@@ -29,5 +30,7 @@ export const LanguageButton = () => {
         }
     }
 
-    return <img src={GetButton()} style={{cursor: 'pointer'}} onClick={() => ChangeLanguage()} alt='Troca idioma/Change Language' />
+    return <img src={GetButton()} className='LanguageButtonStyle' 
+                                  onClick={() => ChangeLanguage()} 
+                                  alt='Troca idioma/Change Language' />
 }

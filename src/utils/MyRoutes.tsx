@@ -11,6 +11,7 @@ import PageLanguagesAndFrameworks from "../pages/PageLanguagesAndFrameworks";
 import PageTools from "../pages/PageTools";
 import PageExperience from "../pages/PageExperience";
 import PageAbout from "../pages/PageAbout";
+import PageProjects from "../pages/PageProjects";
 
 
 //<--- Criador e gerenciador das Rotas do sistema --->
@@ -43,6 +44,10 @@ const MyRoutes = createBrowserRouter([
             {
                 path: "/about",
                 element: <PageAbout />
+            },
+            {
+                path: "/projects",
+                element: <PageProjects />
             }
         ],
     },
