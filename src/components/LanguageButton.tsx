@@ -30,7 +30,7 @@ export const LanguageButton = () => {
         }
     }
 
-    return <img src={GetButton()} className='LanguageButtonStyle' 
+    return <img src={GetButton()} className='LanguageButtonStyle'
                                   onClick={() => ChangeLanguage()} 
                                   alt='Troca idioma/Change Language' />
 }
