@@ -1,7 +1,13 @@
+import '/src/pages/PagesStyles.css'
+import PageHomeImg from '/src/assets/PageHomeTitle.png'
+import { Translate, currentLanguage } from '../contexts/LanguageContext';
+import { useEffect } from 'react';
+
 const PageHome = () => {
     return (
         <>
-            <h3>Home</h3>
+            {Translate("Teste")}
+            <h1 className="TituloPagina"><img className='TituloPaginaImg' src={PageHomeImg} width={32} height={32} />Seja bem vindo!</h1>
             <p className="lead">An example multi-level sidebar with collasible menu items. The menu functions like an "accordion" where only a single menu is be open at a time.</p>
             <hr />
             <h3>More content...</h3>
@@ -18,4 +24,4 @@ const PageHome = () => {
     )
 }
 
-export default PageHome
+export default PageHome;

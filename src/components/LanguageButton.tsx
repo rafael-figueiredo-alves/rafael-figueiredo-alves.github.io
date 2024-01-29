@@ -1,36 +1,39 @@
 import '/src/components/LanguageButton.css'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import BtnEnglish from '/MeusProjetos/rafael-figueiredo-alves.github.io/src/assets/BtnEnglish.svg'
 import BtnPortugues from '/MeusProjetos/rafael-figueiredo-alves.github.io/src/assets/BtnPortugues.svg'
+import { ChangeLanguage, currentLanguage } from '../contexts/LanguageContext'
 
 export const LanguageButton = () => {
-    const [Idioma, setIdioma] = useState("EN");
+    const [Idioma, setIdioma] = useState(currentLanguage);
 
-    function ChangeLanguage()
+    useEffect(() => ChangeLanguage(Idioma), [Idioma])
+
+    function Change()
     {
-        if (Idioma == "EN")
+        if (Idioma == "pt-BR")
         {
-            setIdioma(() => "PT");
+            setIdioma(() => "en");
         }
         else
         {
-            setIdioma(() => "EN");
+            setIdioma(() => "pt-BR");
         }
     }
 
     function GetButton()
     {
-        if (Idioma == "EN")
+        if (Idioma == "pt-BR")
         {
-            return BtnEnglish;
+            return BtnPortugues;
         }
         else
         {
-            return BtnPortugues;
+            return BtnEnglish;
         }
     }
 
     return <img src={GetButton()} className='LanguageButtonStyle'
-                                  onClick={() => ChangeLanguage()} 
+                                  onClick={() => Change()} 
                                   alt='Troca idioma/Change Language' />
 }

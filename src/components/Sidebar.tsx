@@ -37,7 +37,7 @@ export const Sidebar = () => {
     return (
         <>
             {/* Minha foto */}
-            <div className="container-fluid text-center mt-5">
+            <div className="container-fluid text-center mt-3">
                 <img src={Avatar} width={150} height={150} alt='Avatar' />
             </div>
 
@@ -49,7 +49,7 @@ export const Sidebar = () => {
                 <a href='https://www.linkedin.com/in/rafael-de-figueiredo-alves/' className='align-middle LinksRedesSociais' 
                   data-bs-dismiss="offcanvas" data-bs-target="#SidebarOffcanvas" 
                   onClick={() => window.open('https://www.linkedin.com/in/rafael-de-figueiredo-alves/', '_blank')}>
-                    <img src={Linkedin} width={32} height={32} />
+                    <img className='ImgRedesSociais' src={Linkedin} width={24} height={24} />
                     /in/rafael-figueiredo-alves
                 </a>
             </div>
@@ -58,7 +58,7 @@ export const Sidebar = () => {
                 <a href='https://www.youtube.com/@programacao4all' className='align-middle LinksRedesSociais' 
                   data-bs-dismiss="offcanvas" data-bs-target="#SidebarOffcanvas" 
                   onClick={() => window.open('https://www.youtube.com/@programacao4all', '_blank')}>
-                    <img src={Youtube} width={32} height={32} />
+                    <img className='ImgRedesSociais' src={Youtube} width={24} height={24} />
                     @programacao4all
                 </a>
             </div>
@@ -67,7 +67,7 @@ export const Sidebar = () => {
                 <a href='https://github.com/rafael-figueiredo-alves' className='align-middle LinksRedesSociais' 
                   data-bs-dismiss="offcanvas" data-bs-target="#SidebarOffcanvas" 
                   onClick={() => window.open('https://github.com/rafael-figueiredo-alves', '_blank')}>
-                    <img src={Github} width={32} height={32} />
+                    <img className='ImgRedesSociais' src={Github} width={24} height={24} />
                     /rafael-figueiredo-alves
                 </a>
             </div>
@@ -76,7 +76,7 @@ export const Sidebar = () => {
                 <a href='mailto://devpegasus@outlook.com' className='align-middle LinksRedesSociais' 
                   data-bs-dismiss="offcanvas" data-bs-target="#SidebarOffcanvas" 
                   onClick={() => window.open('mailto://devpegasus@outlook.com', '_blank')}>
-                    <img src={GMail} width={32} height={32} />
+                    <img className='ImgRedesSociais' src={GMail} width={24} height={24} />
                     devpegasus@outlook.com
                 </a>
             </div>
@@ -86,56 +86,56 @@ export const Sidebar = () => {
 
             {/* Menu */}
             <p className='container-fluid mt-1 MenuTitle'>
-                <img src={Menu} className='ImgMenu' width={32} height={32} alt='menu' />
+                <img src={Menu} className='ImgMenu' width={24} height={24} alt='menu' />
                 MENU
             </p>
 
             <div className='container-fluid mt-1'>
                 <NavLink to="/" onClick={() => Navigate("/")} className={({ isActive }) => GetCSSClass(isActive)} 
                          data-bs-dismiss="offcanvas" data-bs-target="#SidebarOffcanvas">
-                            <img src={HomeImg} className='SettingsIcon' width={32} height={32} alt='menu' />
+                            <img src={HomeImg} className='SettingsIcon' width={24} height={24} alt='menu' />
                              Inicio
                 </NavLink>
             </div>
             <div className='container-fluid mt-2'>
                 <NavLink to="/about" onClick={() => Navigate("/about")} className={({ isActive }) => GetCSSClass(isActive)} 
                          data-bs-dismiss="offcanvas" data-bs-target="#SidebarOffcanvas">
-                            <img src={AboutImg} className='SettingsIcon' width={32} height={32} alt='menu' />
+                            <img src={AboutImg} className='SettingsIcon' width={24} height={24} alt='menu' />
                              Sobre mim
                 </NavLink>
             </div>
             <div className='container-fluid mt-2'>
                 <NavLink to="/langagesandframeworks" onClick={() => Navigate("/langagesandframeworks")} className={({ isActive }) => GetCSSClass(isActive)} 
                          data-bs-dismiss="offcanvas" data-bs-target="#SidebarOffcanvas">
-                            <img src={LanguagesImg} className='SettingsIcon' width={32} height={32} alt='menu' />
+                            <img src={LanguagesImg} className='SettingsIcon' width={24} height={24} alt='menu' />
                              Linguagens/Framework
                 </NavLink>
             </div>
             <div className='container-fluid mt-2'>
                 <NavLink to="/tools" onClick={() => Navigate("/tools")} className={({ isActive }) => GetCSSClass(isActive)} 
                          data-bs-dismiss="offcanvas" data-bs-target="#SidebarOffcanvas">
-                            <img src={ToolsImg} className='SettingsIcon' width={32} height={32} alt='menu' />
+                            <img src={ToolsImg} className='SettingsIcon' width={24} height={24} alt='menu' />
                              Ferramentas
                 </NavLink>
             </div>
             <div className='container-fluid mt-2'>
                 <NavLink to="/experience" onClick={() => Navigate("/experience")} className={({ isActive }) => GetCSSClass(isActive)} 
                          data-bs-dismiss="offcanvas" data-bs-target="#SidebarOffcanvas">
-                            <img src={ExperienceImg} className='SettingsIcon' width={32} height={32} alt='menu' />
+                            <img src={ExperienceImg} className='SettingsIcon' width={24} height={24} alt='menu' />
                              Experiência
                 </NavLink>
             </div>
             <div className='container-fluid mt-2'>
                 <NavLink to="/projects" onClick={() => Navigate("/projects")} className={({ isActive }) => GetCSSClass(isActive)} 
                          data-bs-dismiss="offcanvas" data-bs-target="#SidebarOffcanvas">
-                            <img src={Github} className='SettingsIcon' height={32} alt='menu' />
+                            <img src={Github} className='SettingsIcon' width={24} height={24} alt='menu' />
                              Projetos
                 </NavLink>
             </div>
             <div className='container-fluid mt-2'>
                 <NavLink to="/contacts" onClick={() => Navigate("/contacts")} className={({ isActive }) => GetCSSClass(isActive)} 
                          data-bs-dismiss="offcanvas" data-bs-target="#SidebarOffcanvas">
-                            <img src={ContactsImg} className='SettingsIcon' width={32} height={32} alt='menu' />
+                            <img src={ContactsImg} className='SettingsIcon' width={24} height={24} alt='menu' />
                              Entre em contato
                 </NavLink>
             </div>        
