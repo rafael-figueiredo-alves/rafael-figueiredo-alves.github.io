@@ -18,8 +18,12 @@ import ContactsImg from '/src/assets/Contacts.png'
 //Importações de Biblioteca
 import { NavLink, useNavigate } from 'react-router-dom'
 
+import { useContext } from 'react'
+import { LanguageContext } from '../contexts/LanguageContext'
+
 //Código principal do componente
 export const Sidebar = () => {
+    const {Translate} = useContext(LanguageContext)
 
     const Navigate = useNavigate();
 
@@ -94,49 +98,49 @@ export const Sidebar = () => {
                 <NavLink to="/" onClick={() => Navigate("/")} className={({ isActive }) => GetCSSClass(isActive)} 
                          data-bs-dismiss="offcanvas" data-bs-target="#SidebarOffcanvas">
                             <img src={HomeImg} className='SettingsIcon' width={24} height={24} alt='menu' />
-                             Inicio
+                             {Translate("Menu.Inicio", false)}
                 </NavLink>
             </div>
             <div className='container-fluid mt-2'>
                 <NavLink to="/about" onClick={() => Navigate("/about")} className={({ isActive }) => GetCSSClass(isActive)} 
                          data-bs-dismiss="offcanvas" data-bs-target="#SidebarOffcanvas">
                             <img src={AboutImg} className='SettingsIcon' width={24} height={24} alt='menu' />
-                             Sobre mim
+                            {Translate("Menu.Sobre", false)}
                 </NavLink>
             </div>
             <div className='container-fluid mt-2'>
                 <NavLink to="/langagesandframeworks" onClick={() => Navigate("/langagesandframeworks")} className={({ isActive }) => GetCSSClass(isActive)} 
                          data-bs-dismiss="offcanvas" data-bs-target="#SidebarOffcanvas">
                             <img src={LanguagesImg} className='SettingsIcon' width={24} height={24} alt='menu' />
-                             Linguagens/Framework
+                            {Translate("Menu.Linguagens", false)}
                 </NavLink>
             </div>
             <div className='container-fluid mt-2'>
                 <NavLink to="/tools" onClick={() => Navigate("/tools")} className={({ isActive }) => GetCSSClass(isActive)} 
                          data-bs-dismiss="offcanvas" data-bs-target="#SidebarOffcanvas">
                             <img src={ToolsImg} className='SettingsIcon' width={24} height={24} alt='menu' />
-                             Ferramentas
+                            {Translate("Menu.Ferramentas", false)}
                 </NavLink>
             </div>
             <div className='container-fluid mt-2'>
                 <NavLink to="/experience" onClick={() => Navigate("/experience")} className={({ isActive }) => GetCSSClass(isActive)} 
                          data-bs-dismiss="offcanvas" data-bs-target="#SidebarOffcanvas">
                             <img src={ExperienceImg} className='SettingsIcon' width={24} height={24} alt='menu' />
-                             Experiência
+                            {Translate("Menu.Experiencia", false)}
                 </NavLink>
             </div>
             <div className='container-fluid mt-2'>
                 <NavLink to="/projects" onClick={() => Navigate("/projects")} className={({ isActive }) => GetCSSClass(isActive)} 
                          data-bs-dismiss="offcanvas" data-bs-target="#SidebarOffcanvas">
                             <img src={Github} className='SettingsIcon' width={24} height={24} alt='menu' />
-                             Projetos
+                            {Translate("Menu.Projetos", false)}
                 </NavLink>
             </div>
             <div className='container-fluid mt-2'>
                 <NavLink to="/contacts" onClick={() => Navigate("/contacts")} className={({ isActive }) => GetCSSClass(isActive)} 
                          data-bs-dismiss="offcanvas" data-bs-target="#SidebarOffcanvas">
                             <img src={ContactsImg} className='SettingsIcon' width={24} height={24} alt='menu' />
-                             Entre em contato
+                            {Translate("Menu.Contato", false)}
                 </NavLink>
             </div>        
     </>

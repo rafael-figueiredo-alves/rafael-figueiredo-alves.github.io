@@ -1,12 +1,15 @@
 import '/src/pages/PagesStyles.css'
 import PageHomeImg from '/src/assets/PageHomeTitle.png'
-import { Translate, currentLanguage } from '../contexts/LanguageContext';
-import { useEffect } from 'react';
+
+import { useContext } from 'react'
+import { LanguageContext } from '../contexts/LanguageContext'
 
 const PageHome = () => {
+    const {CurrentLanguage} = useContext(LanguageContext)
+
     return (
         <>
-            {Translate("Teste")}
+            <p>O idioma atual é: {CurrentLanguage}</p>
             <h1 className="TituloPagina"><img className='TituloPaginaImg' src={PageHomeImg} width={32} height={32} />Seja bem vindo!</h1>
             <p className="lead">An example multi-level sidebar with collasible menu items. The menu functions like an "accordion" where only a single menu is be open at a time.</p>
             <hr />
