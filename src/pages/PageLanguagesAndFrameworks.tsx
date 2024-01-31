@@ -1,6 +1,13 @@
+import PageLanguagesImg from '/src/assets/PageLanguagesImg.png'
+import { useContext } from "react"
+import { LanguageContext } from "../contexts/LanguageContext"
+import { PageTitle } from '../components/PageTitle'
+
 const PageLanguagesAndFrameworks = () => {
+    const {Translate} = useContext(LanguageContext)
+
     return(
-        <h1>Languages And Frameworks</h1>
+        <PageTitle Image={PageLanguagesImg}>{Translate("Languages.Titulo", false)}</PageTitle>
     )
 }
 

@@ -8,7 +8,28 @@ export const Translations = {
             "Experiencia" : "Experiência",
             "Projetos"    : "Projetos",
             "Contato"     : "Entre em contato"
-        } 
+        }, 
+        "Home" :{
+            "Titulo" : "Seja bem vindo!"
+        },
+        "About":{
+            "Titulo" : "Sobre mim"
+        },
+        "Contacts":{
+            "Titulo" : "Entre em contato"
+        },
+        "Experience":{
+            "Titulo" : "Minha experiência e habilidades"
+        },
+        "Projects":{
+            "Titulo" : "Meus Projetos"
+        },
+        "Tools":{
+            "Titulo" : "Ferramentas que eu uso"
+        },
+        "Languages":{
+            "Titulo" : "Linguagens e Frameworks"
+        }
     },
     "en" : {
         "Menu" :{
@@ -19,6 +40,27 @@ export const Translations = {
             "Experiencia" : "Experience",
             "Projetos"    : "Projects",
             "Contato"     : "Keep in touch"
-        } 
+        },
+        "Home" :{
+            "Titulo" : "Welcome!"
+        },
+        "About":{
+            "Titulo" : "About me"
+        },
+        "Contacts":{
+            "Titulo" : "Keep in touch"
+        },
+        "Experience":{
+            "Titulo" : "My experience and skills"
+        },
+        "Projects":{
+            "Titulo" : "My Projects"
+        },
+        "Tools":{
+            "Titulo" : "Tools I use"
+        },
+        "Languages":{
+            "Titulo" : "Languages and Frameworks"
+        }        
     }    
 }

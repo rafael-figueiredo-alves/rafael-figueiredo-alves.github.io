@@ -3,14 +3,14 @@ import PageHomeImg from '/src/assets/PageHomeTitle.png'
 
 import { useContext } from 'react'
 import { LanguageContext } from '../contexts/LanguageContext'
+import { PageTitle } from '../components/PageTitle'
 
 const PageHome = () => {
-    const {CurrentLanguage} = useContext(LanguageContext)
+    const {Translate} = useContext(LanguageContext)
 
     return (
         <>
-            <p>O idioma atual é: {CurrentLanguage}</p>
-            <h1 className="TituloPagina"><img className='TituloPaginaImg' src={PageHomeImg} width={32} height={32} />Seja bem vindo!</h1>
+            <PageTitle Image={PageHomeImg}>{Translate("Home.Titulo", false)}</PageTitle>
             <p className="lead">An example multi-level sidebar with collasible menu items. The menu functions like an "accordion" where only a single menu is be open at a time.</p>
             <hr />
             <h3>More content...</h3>

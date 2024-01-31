@@ -30,7 +30,7 @@ const MyRoutes = createBrowserRouter([
                 element: <PageContacts />
             },
             {
-                path: "/langagesandframeworks",
+                path: "/languagesandframworks",
                 element: <PageLanguagesAndFrameworks />
             },
             {

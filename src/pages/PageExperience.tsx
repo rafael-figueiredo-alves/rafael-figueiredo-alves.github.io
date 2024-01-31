@@ -1,13 +1,14 @@
+import { useContext } from 'react'
+import { PageTitle } from '../components/PageTitle'
+import PageExperienceImg from '/src/assets/PageExperienceImg.png'
+import { LanguageContext } from '../contexts/LanguageContext'
+
 const PageExperience = () => {
-    function GetLanguage() : string
-    {
-        return window.navigator.language;
-    }
+    const {Translate} = useContext(LanguageContext);
 
     return(
         <>
-        <h1>Experience</h1>
-        <p>{GetLanguage()}</p>
+        <PageTitle Image={PageExperienceImg}>{Translate("Experience.Titulo", false)}</PageTitle>
         </>
     )
 }

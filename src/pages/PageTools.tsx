@@ -1,6 +1,13 @@
+import { useContext } from 'react'
+import PageToolsImg from '/src/assets/PageToolsImg.png'
+import { LanguageContext } from '../contexts/LanguageContext'
+import { PageTitle } from '../components/PageTitle'
+
 const PageTools = () => {
+    const {Translate} = useContext(LanguageContext)
+
     return(
-        <h1>Tools</h1>
+        <PageTitle Image={PageToolsImg}>{Translate("Tools.Titulo", false)}</PageTitle>
     )
 }
 

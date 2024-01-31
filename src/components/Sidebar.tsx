@@ -109,7 +109,7 @@ export const Sidebar = () => {
                 </NavLink>
             </div>
             <div className='container-fluid mt-2'>
-                <NavLink to="/langagesandframeworks" onClick={() => Navigate("/langagesandframeworks")} className={({ isActive }) => GetCSSClass(isActive)} 
+                <NavLink to="/languagesandframworks" onClick={() => Navigate("/languagesandframworks")} className={({ isActive }) => GetCSSClass(isActive)} 
                          data-bs-dismiss="offcanvas" data-bs-target="#SidebarOffcanvas">
                             <img src={LanguagesImg} className='SettingsIcon' width={24} height={24} alt='menu' />
                             {Translate("Menu.Linguagens", false)}

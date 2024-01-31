@@ -1,9 +1,14 @@
 import '/src/pages/PagesStyles.css'
 import PageContactsImg from '/src/assets/PageContactsTitle.png'
+import { PageTitle } from '../components/PageTitle'
+import { LanguageContext } from '../contexts/LanguageContext';
+import { useContext } from 'react';
 
 const PageContacts = () => {
+    const {Translate} = useContext(LanguageContext);
+
     return (
-    <h1 className="TituloPagina"><img className='TituloPaginaImg' src={PageContactsImg} width={32} height={32} />Contatos</h1>
+        <PageTitle Image={PageContactsImg}>{Translate("Contacts.Titulo", false)}</PageTitle>
     )
 }
 
