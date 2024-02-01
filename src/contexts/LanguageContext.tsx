@@ -1,28 +1,15 @@
 import { createContext, useEffect, useState } from "react";
 import { getLanguage, saveLanguage } from "../services/LanguageService";
-
 import { RenderHTML } from "../utils/Functions";
 import { Translations } from "./Translations";
-
-
-interface Translation_1 {
-    [key: string]: string
-}
-
-interface Translation_2 {
-    [key: string]: Translation_1
-}
-
-interface Translation_3 {
-    [key: string]: Translation_2
-}
+import { iTranslation } from "../models/TranslationsModel";
 
 export const LanguageContext = createContext(
     {
         CurrentLanguage: "pt-BR",
         ChangeLanguage: () => {},
         Translate: (Chave: string, Formatado: boolean = true):any => {
-            const _Translations: Translation_3 = Translations;
+            const _Translations: iTranslation = Translations;
 
             let valores = Chave.split(".");
 
@@ -37,7 +24,7 @@ export const LanguageContext = createContext(
 export const LanguageProvider = (props: any) => {
     const [CurrentLanguage, setCurrentLanguage] = useState(getLanguage);
 
-    const _Translations: Translation_3 = Translations;
+    const _Translations: iTranslation = Translations;
 
     useEffect(() => saveLanguage(CurrentLanguage), [CurrentLanguage]);
 
