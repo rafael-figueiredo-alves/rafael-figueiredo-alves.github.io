@@ -13,7 +13,6 @@ import PageExperience from "../pages/PageExperience";
 import PageAbout from "../pages/PageAbout";
 import PageProjects from "../pages/PageProjects";
 
-
 //<--- Criador e gerenciador das Rotas do sistema --->
 const MyRoutes = createBrowserRouter([
     {
