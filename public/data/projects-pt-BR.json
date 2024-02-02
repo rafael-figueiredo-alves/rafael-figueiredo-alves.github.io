@@ -3,5 +3,15 @@
         "Title" : "eTasks",
         "Version" : "1.0.1",
         "Description" : "This is a test"
+    },
+    {
+        "Title" : "eFirebase",
+        "Version" : "1.0.1",
+        "Description" : "This is a test"
+    },
+    {
+        "Title" : "DotEnv4Delphi",
+        "Version" : "1.0.1",
+        "Description" : "This is a test"
     }
 ]
