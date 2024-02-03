@@ -1,21 +1,22 @@
 .chip {
     display: inline-block;
-    padding: 0 25px;
-    height: 35px;
+    padding: 0 10px;
+    height: 20px;
     font-size: 16px;
-    line-height: 35px;
+    line-height: 20px;
     border-radius: 25px;
     margin-bottom: 2px;
+    margin-top: 2px;
     background-color: #f1f1f1;
     box-shadow: 1px 1px 0px 0px black;
-    margin-right: 5px;
-    margin-left: 5px;
+    margin-right: 3px;
+    margin-left: 3px;
   }
   
   .chip img {
     float: left;
-    margin: 0 5px 0 -25px;
-    height: 35px;
-    width: 35px;
+    margin: 0 5px 0 -10px;
+    height: 20px;
+    width: 20px;
     border-radius: 50%;
   }
