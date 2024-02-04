@@ -18,6 +18,7 @@ import Lazarus from '/src/components/Chip/Assets/lazarus.png'
 import Linux from '/src/components/Chip/Assets/Linux.png'
 import MongoDB from '/src/components/Chip/Assets/MongoDB.png'
 import Multiplatform from '/src/components/Chip/Assets/Multiplatform.png'
+import MySQL from '/src/components/Chip/Assets/MySQL.png'
 import Python from '/src/components/Chip/Assets/Python.png'
 import ReactLogo from '/src/components/Chip/Assets/ReactJS.png'
 import Rust from '/src/components/Chip/Assets/Rust.png'
@@ -61,28 +62,182 @@ interface ChipProps {
 
 export const Chip = (props: ChipProps) => {
     function GetImage(): string{
+        
+        let ImageSrc: string;
+
         switch(props.Kind) {
             case ChipKind.Android:
-                return {Android};
-        }
+                ImageSrc = Android;
+                break;
+            case ChipKind.Blazor:
+                ImageSrc = Blazor;
+                break;
+            case ChipKind.Bootstrap:
+                ImageSrc = Bootstrap;
+                break;
+            case ChipKind.CSharp:
+                ImageSrc = CSharp;
+                break;
+            case ChipKind.CSS3:
+                ImageSrc = CSS3;
+                break;
+            case ChipKind.Dart:
+                ImageSrc = Dart;
+                break;
+            case ChipKind.Delphi:
+                ImageSrc = Delphi;
+                break;
+            case ChipKind.ExcelVBA:
+                ImageSrc = ExcelVBA;
+                break;
+            case ChipKind.Firebase:
+                ImageSrc = Firebase;
+                break;
+            case ChipKind.Flutter:
+                ImageSrc = Flutter;
+                break;
+            case ChipKind.HTML5:
+                ImageSrc = HTML5;
+                break;
+            case ChipKind.iOS:
+                ImageSrc = iOS;
+                break;
+            case ChipKind.Javascript:
+                ImageSrc = Javascript;
+                break;
+            case ChipKind.Lazarus:
+                ImageSrc = Lazarus;
+                break;
+            case ChipKind.Linux:
+                ImageSrc = Linux;
+                break;
+            case ChipKind.MongoDB:
+                ImageSrc = MongoDB;
+                break;
+            case ChipKind.Multiplatform:
+                ImageSrc = Multiplatform;
+                break;
+            case ChipKind.MySQL:
+                ImageSrc = MySQL;
+                break;
+            case ChipKind.Python:
+                ImageSrc = Python;
+                break;
+            case ChipKind.ReactJS:
+                ImageSrc = ReactLogo;
+                break;
+            case ChipKind.Rust:
+                ImageSrc = Rust;
+                break;
+            case ChipKind.SQLite:
+                ImageSrc = SQLite;
+                break;
+            case ChipKind.Typescript:
+                ImageSrc = Typescript;
+                break;
+            case ChipKind.Vite:
+                ImageSrc = Vite;
+                break;
+            case ChipKind.Windows:
+                ImageSrc = Windows;
+                break;
+            default:
+                ImageSrc = Multiplatform;
+        };
+
+        return ImageSrc;
+    }
+
+    function GetText(): string{
+        let Texto: string;
+
+        switch(props.Kind) {
+            case ChipKind.Android:
+                Texto = 'Android';
+                break;
+            case ChipKind.Blazor:
+                Texto = 'Blazor';
+                break;
+            case ChipKind.Bootstrap:
+                Texto = 'Bootstrap';
+                break;
+            case ChipKind.CSharp:
+                Texto = 'C#';
+                break;
+            case ChipKind.CSS3:
+                Texto = 'CSS3';
+                break;
+            case ChipKind.Dart:
+                Texto = 'Dart';
+                break;
+            case ChipKind.Delphi:
+                Texto = 'Delphi';
+                break;
+            case ChipKind.ExcelVBA:
+                Texto = 'Excel VBA';
+                break;
+            case ChipKind.Firebase:
+                Texto = 'Firebase';
+                break;
+            case ChipKind.Flutter:
+                Texto = 'Flutter';
+                break;
+            case ChipKind.HTML5:
+                Texto = 'HTML5';
+                break;
+            case ChipKind.iOS:
+                Texto = 'iOS';
+                break;
+            case ChipKind.Javascript:
+                Texto = 'Javascript';
+                break;
+            case ChipKind.Lazarus:
+                Texto = 'Lazarus';
+                break;
+            case ChipKind.Linux:
+                Texto = 'Linux';
+                break;
+            case ChipKind.MongoDB:
+                Texto = 'MongoDB';
+                break;
+            case ChipKind.Multiplatform:
+                Texto = 'Multi-platform';
+                break;
+            case ChipKind.MySQL:
+                Texto = 'MySQL';
+                break;
+            case ChipKind.Python:
+                Texto = 'Python';
+                break;
+            case ChipKind.ReactJS:
+                Texto = 'React JS';
+                break;
+            case ChipKind.Rust:
+                Texto = 'Rust';
+                break;
+            case ChipKind.SQLite:
+                Texto = 'SQLite';
+                break;
+            case ChipKind.Typescript:
+                Texto = 'Typescript';
+                break;
+            case ChipKind.Vite:
+                Texto = 'Vite';
+                break;
+            case ChipKind.Windows:
+                Texto = 'Windows';
+                break;
+            default:
+                Texto = Multiplatform;
+        };
+
+        return Texto;
     }
 
     return (
-            switch(props.Kind){
-                case Android:
-                    (
-                        <div className="chip">
-                        <img src={Android} alt="Person" width="96" height="96" />
-                        
-                    </div> 
-                    ) 
-                    break;
-                   
-            }
-           }
             <div className="chip">
-                <img src={Avatar} alt="Person" width="96" height="96" />
-                
+                <img src={GetImage()} alt={GetText()} width="96" height="96" />
+                {GetText()}
             </div>
     )
 }

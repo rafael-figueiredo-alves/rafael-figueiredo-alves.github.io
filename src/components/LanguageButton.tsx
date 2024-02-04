@@ -5,7 +5,7 @@ import BtnPortugues from '/MeusProjetos/rafael-figueiredo-alves.github.io/src/as
 import { LanguageContext } from '../contexts/LanguageContext'
 
 export const LanguageButton = () => {
-    const {CurrentLanguage, ChangeLanguage} = useContext(LanguageContext);
+    const {CurrentLanguage, ChangeLanguage, Translate} = useContext(LanguageContext);
 
     function GetButton()
     {
@@ -21,5 +21,7 @@ export const LanguageButton = () => {
 
     return <img src={GetButton()} className='LanguageButtonStyle'
                                   onClick={() => ChangeLanguage()} 
-                                  alt='Troca idioma/Change Language' />
+                                  alt='Troca idioma/Change Language'
+                                  data-bs-toggle="tooltip" data-bs-placement="bottom" 
+                                  title={Translate("LanguageBtn.Tip", false)} />
 }

@@ -9,6 +9,9 @@ export const Translations = {
             "Projetos"    : "Projetos",
             "Contato"     : "Entre em contato"
         }, 
+        "LanguageBtn" : {
+            "Tip" : 'Change language'
+        },
         "Home" :{
             "Titulo" : "Seja bem vindo!"
         },
@@ -41,6 +44,9 @@ export const Translations = {
             "Projetos"    : "Projects",
             "Contato"     : "Keep in touch"
         },
+        "LanguageBtn" : {
+            "Tip" : 'Trocar idioma'
+        },        
         "Home" :{
             "Titulo" : "Welcome!"
         },

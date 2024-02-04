@@ -3,7 +3,7 @@ import PageContactsImg from '/src/assets/PageContactsTitle.png'
 import { PageTitle } from '../components/PageTitle'
 import { LanguageContext } from '../contexts/LanguageContext';
 import { useContext } from 'react';
-import { Chip } from '../components/Chip/Chip';
+import { Chip, ChipKind } from '../components/Chip/Chip';
 
 const PageContacts = () => {
     const {Translate} = useContext(LanguageContext);
@@ -11,8 +11,6 @@ const PageContacts = () => {
     return (
         <>
         <PageTitle Image={PageContactsImg}>{Translate("Contacts.Titulo", false)}</PageTitle>
-        <Chip Texto='Teste' />
-
         </>
     )
 }
