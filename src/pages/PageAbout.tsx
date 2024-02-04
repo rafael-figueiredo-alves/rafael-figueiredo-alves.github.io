@@ -4,6 +4,7 @@ import { LanguageContext } from '../contexts/LanguageContext'
 import { PageTitle } from '../components/PageTitle'
 import { GetDataFromJSONService } from '../services/GetDataFromJSONService'
 import { iProjects } from '../models/ProjectsModel'
+import { Chip } from '../components/Chip/Chip'
 
 const PageAbout = () => {
     const { CurrentLanguage, Translate } = useContext(LanguageContext)
@@ -35,29 +36,20 @@ const PageAbout = () => {
             <button  className='btn btn-primary' onClick={Anterior} disabled={indice == 0}>Anterior</button>
             <button  className='btn btn-primary' onClick={Proximo} disabled={indice == projects.length-1}>Próximo</button>
             {projects.length > 0 && (
-                <ProjectForm2 data={projects} num={indice} />
+                <ProjectForm2 data={projects[indice]} />
             )}
 
         </>
     )
 }
 
-const ProjectForm = ({ data, num }: { data: iProjects, num: number }) => {
+const ProjectForm2 = ({ data }: { data: iProjects }) => {
     return (
-        <li key={num}>
+        <>
             <p>- {data.Title}</p>
             <p>- {data.Version}</p>
             <p>- {data.Description}</p>
-        </li>
-    )
-}
-
-const ProjectForm2 = ({ data, num }: { data: iProjects[], num: number }) => {
-    return (
-        <>
-            <p>- {data[num].Title}</p>
-            <p>- {data[num].Version}</p>
-            <p>- {data[num].Description}</p>
+            <Chip Kind={data.Chip} />
             </>
     )
 }
