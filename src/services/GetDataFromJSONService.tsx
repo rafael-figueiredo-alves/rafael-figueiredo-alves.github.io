@@ -2,7 +2,7 @@
 //JSON de dentro da pasta Data no diretório público, passando o nome da data que deseja carregar e a língua/idioma
 
 export const GetDataFromJSONService = <T extends unknown>(data: string, language: string): Promise<T[]> => {
-    return fetch(`/data/${data}-${language}.json`)
+    return fetch(`https://portfolio-rafaelfalves-default-rtdb.firebaseio.com/${data}-${language}.json`)
       .then(response => response.json())
       .then(data => data);
   }

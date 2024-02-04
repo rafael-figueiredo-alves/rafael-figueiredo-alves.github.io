@@ -7,7 +7,7 @@ import { LanguageContext } from '../contexts/LanguageContext'
 export const LanguageButton = () => {
     const {CurrentLanguage, ChangeLanguage, Translate} = useContext(LanguageContext);
 
-    function GetButton()
+    function GetButton(): string
     {
         if (CurrentLanguage == "pt-BR")
         {
@@ -21,7 +21,7 @@ export const LanguageButton = () => {
 
     return <img src={GetButton()} className='LanguageButtonStyle'
                                   onClick={() => ChangeLanguage()} 
-                                  alt='Troca idioma/Change Language'
+                                  alt={Translate("LanguageBtn.Tip", false)}
                                   data-bs-toggle="tooltip" data-bs-placement="bottom" 
                                   title={Translate("LanguageBtn.Tip", false)} />
 }

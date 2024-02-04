@@ -1,4 +1,3 @@
-import '/src/pages/PagesStyles.css'
 import PageHomeImg from '/src/assets/PageHomeTitle.png'
 
 import { useContext } from 'react'
