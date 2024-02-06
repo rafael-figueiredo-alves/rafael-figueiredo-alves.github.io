@@ -1,8 +1,8 @@
 import './MainLayout.css'
 import { Outlet } from 'react-router-dom'
-import { NavBar } from '../components/NavBar'
-import { LanguageButton } from '../components/LanguageButton'
-import { Sidebar } from '../components/Sidebar'
+import { NavBar } from '../components/NavBar_SideBar/NavBar'
+import { LanguageButton } from '../components/LanguageButton/LanguageButton'
+import { Sidebar } from '../components/NavBar_SideBar/Sidebar'
 import { MyFooter } from '../components/MyFooter'
 
 function MainLayout() {

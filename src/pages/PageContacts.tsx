@@ -1,5 +1,5 @@
 import PageContactsImg from '/src/assets/PageContactsTitle.png'
-import { PageTitle } from '../components/PageTitle'
+import { PageTitle } from '../components/Shared/PageTitle'
 import { LanguageContext } from '../contexts/LanguageContext';
 import { useContext } from 'react';
 

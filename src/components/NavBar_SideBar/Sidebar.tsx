@@ -1,5 +1,5 @@
 //Arquivo de Estilos CSS
-import '/src/components/Sidebar.css'
+import '/src/components/NavBar_SideBar/Sidebar.css'
 
 //Imagens usadas na Sidebar
 import Avatar from '/src/assets/Avatar.png'
@@ -19,7 +19,7 @@ import ContactsImg from '/src/assets/Contacts.png'
 import { NavLink, useNavigate } from 'react-router-dom'
 
 import { useContext } from 'react'
-import { LanguageContext } from '../contexts/LanguageContext'
+import { LanguageContext } from '../../contexts/LanguageContext'
 
 //Código principal do componente
 export const Sidebar = () => {

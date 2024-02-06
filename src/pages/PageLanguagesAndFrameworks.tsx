@@ -1,7 +1,7 @@
 import PageLanguagesImg from '/src/assets/PageLanguagesImg.png'
 import { useContext } from "react"
 import { LanguageContext } from "../contexts/LanguageContext"
-import { PageTitle } from '../components/PageTitle'
+import { PageTitle } from '../components/Shared/PageTitle'
 
 const PageLanguagesAndFrameworks = () => {
     const {Translate} = useContext(LanguageContext)

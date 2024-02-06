@@ -1,5 +1,5 @@
-import '/src/components/NavBar.css'
-import { LanguageButton } from './LanguageButton'
+import '/src/components/NavBar_SideBar/NavBar.css'
+import { LanguageButton } from '../LanguageButton/LanguageButton'
 import { Offcanvas } from './Offcanvas'
 import BtnMenu from '/MeusProjetos/rafael-figueiredo-alves.github.io/src/assets/Menu.png'
 

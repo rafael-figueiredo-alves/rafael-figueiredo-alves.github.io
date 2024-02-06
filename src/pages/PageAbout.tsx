@@ -1,10 +1,10 @@
 import { useContext, useEffect, useState } from 'react'
 import PageAboutImg from '/src/assets/PageAboutImg.png'
 import { LanguageContext } from '../contexts/LanguageContext'
-import { PageTitle } from '../components/PageTitle'
+import { PageTitle } from '../components/Shared/PageTitle'
 import { GetDataFromJSONService } from '../services/GetDataFromJSONService'
 import { iProjects } from '../models/ProjectsModel'
-import { Chip } from '../components/Chip/Chip'
+import { Chip } from '../components/Shared/Chip/Chip'
 
 const PageAbout = () => {
     const { CurrentLanguage, Translate } = useContext(LanguageContext)

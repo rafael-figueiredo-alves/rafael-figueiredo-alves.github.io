@@ -2,7 +2,7 @@ import PageHomeImg from '/src/assets/PageHomeTitle.png'
 
 import { useContext } from 'react'
 import { LanguageContext } from '../contexts/LanguageContext'
-import { PageTitle } from '../components/PageTitle'
+import { PageTitle } from '../components/Shared/PageTitle'
 
 const PageHome = () => {
     const {Translate} = useContext(LanguageContext)

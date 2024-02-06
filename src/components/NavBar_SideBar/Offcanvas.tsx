@@ -1,4 +1,4 @@
-import '/src/components/Offcanvas.css';
+import '/src/components/NavBar_SideBar/Offcanvas.css';
 import { Sidebar } from "./Sidebar"
 
 export const Offcanvas = () => {

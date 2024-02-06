@@ -1,8 +1,8 @@
-import '/src/components/LanguageButton.css'
+import '/src/components/LanguageButton/LanguageButton.css'
 import { useContext } from 'react'
 import BtnEnglish from '/MeusProjetos/rafael-figueiredo-alves.github.io/src/assets/BtnEnglish.svg'
 import BtnPortugues from '/MeusProjetos/rafael-figueiredo-alves.github.io/src/assets/BtnPortugues.svg'
-import { LanguageContext } from '../contexts/LanguageContext'
+import { LanguageContext } from '../../contexts/LanguageContext'
 
 export const LanguageButton = () => {
     const {CurrentLanguage, ChangeLanguage, Translate} = useContext(LanguageContext);

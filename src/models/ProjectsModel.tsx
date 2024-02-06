@@ -1,4 +1,4 @@
-import { ChipKind } from "../components/Chip/Chip";
+import { ChipKind } from "../components/Shared/Chip/Chip";
 
 export interface iProjects{
     Title: string,
