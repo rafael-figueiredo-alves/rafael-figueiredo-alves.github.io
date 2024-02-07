@@ -3,8 +3,8 @@ import PageAboutImg from '/src/assets/PageAboutImg.png'
 import { LanguageContext } from '../contexts/LanguageContext'
 import { PageTitle } from '../components/Shared/PageTitle'
 import { GetDataFromJSONService } from '../services/GetDataFromJSONService'
-import { iProjects } from '../models/ProjectsModel'
-import { Chip } from '../components/Shared/Chip/Chip'
+import { iProjects } from '../models/Interfaces'
+import { ProjectCard } from '../components/Shared/ProjectCard'
 
 const PageAbout = () => {
     const { CurrentLanguage, Translate } = useContext(LanguageContext)
@@ -28,29 +28,12 @@ const PageAbout = () => {
     return (
         <>
             <PageTitle Image={PageAboutImg}>{Translate("About.Titulo", false)}</PageTitle>
-{/*             <ul>
-                {projects.map((project, index) => (
-                    <ProjectForm data={project} num={index} />
-                ))}
-            </ul> */}
-            <button  className='btn btn-primary' onClick={Anterior} disabled={indice == 0}>Anterior</button>
-            <button  className='btn btn-primary' onClick={Proximo} disabled={indice == projects.length-1}>Próximo</button>
+
             {projects.length > 0 && (
-                <ProjectForm2 data={projects[indice]} />
+                <ProjectCard Project={projects} Indice={indice} BtnAnteriorClick={Anterior} BtnProximoClick={Proximo}/>
             )}
 
         </>
-    )
-}
-
-const ProjectForm2 = ({ data }: { data: iProjects }) => {
-    return (
-        <>
-            <p>- {data.Title}</p>
-            <p>- {data.Version}</p>
-            <p>- {data.Description}</p>
-            <Chip Kind={data.Chip} />
-            </>
     )
 }
 

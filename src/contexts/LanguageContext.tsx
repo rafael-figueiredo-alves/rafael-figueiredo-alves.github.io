@@ -2,7 +2,7 @@ import { createContext, useEffect, useState } from "react";
 import { getLanguage, saveLanguage } from "../services/LanguageService";
 import { RenderHTML } from "../utils/Functions";
 import { Translations } from "./Translations";
-import { iTranslation } from "../models/TranslationsModel";
+import { iTranslation } from "../models/Interfaces";
 
 export const LanguageContext = createContext(
     {

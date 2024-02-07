@@ -26,39 +26,8 @@ import SQLite from '/src/components/Shared/Chip/Assets/SQLLite.png'
 import Typescript from '/src/components/Shared/Chip/Assets/Typescript.png'
 import Vite from '/src/components/Shared/Chip/Assets/Vite.png'
 import Windows from '/src/components/Shared/Chip/Assets/Windows.png'
+import { ChipKind, ChipProps } from '../../../models/Interfaces'
 //#endregion
-
-export enum ChipKind {
-    Android = 1,
-    Blazor = 2,
-    Bootstrap = 3,
-    CSharp = 4,
-    CSS3 = 5,
-    Dart = 6,
-    Delphi = 7,
-    ExcelVBA = 8,
-    Firebase = 9,
-    Flutter = 10,
-    HTML5 = 11,
-    iOS = 12,
-    Javascript = 13,
-    Lazarus = 14,
-    Linux = 15,
-    MongoDB = 16,
-    Multiplatform = 17,
-    MySQL = 18,
-    Python = 19,
-    ReactJS = 20,
-    Rust = 21,
-    SQLite = 22,
-    Typescript = 23,
-    Vite = 24,
-    Windows = 25
-}
-
-interface ChipProps {
-    Kind: ChipKind
-}
 
 export const Chip = (props: ChipProps) => {
     function GetImage(): string{

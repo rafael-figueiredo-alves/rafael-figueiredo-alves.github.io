@@ -32,6 +32,10 @@ export const Translations = {
         },
         "Languages":{
             "Titulo" : "Linguagens e Frameworks"
+        },
+        "UI-Elements":{
+            "BtnAnterior" : "Anterior",
+            "BtnProximo" : "Próximo"
         }
     },
     "en" : {
@@ -51,7 +55,7 @@ export const Translations = {
             "Titulo" : "Welcome!"
         },
         "About":{
-            "Titulo" : "About me"
+            "Titulo" : "About me"          
         },
         "Contacts":{
             "Titulo" : "Keep in touch"
@@ -67,6 +71,10 @@ export const Translations = {
         },
         "Languages":{
             "Titulo" : "Languages and Frameworks"
+        },
+        "UI-Elements":{
+            "BtnAnterior" : "Previous",
+            "BtnProximo" : "Next"
         }        
     }    
 }
