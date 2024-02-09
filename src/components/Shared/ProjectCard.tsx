@@ -4,9 +4,12 @@ import { ProjectCardProps } from "../../models/Interfaces";
 import BtnBack from '/src/assets/BtnBack.png';
 import BtnNext from '/src/assets/BtnNext.png';
 import { Chip } from "./Chip/Chip";
+import { Carrousel } from "./Carrousel";
 
 export const ProjectCard = (props: ProjectCardProps) => {
     const { Translate } = useContext(LanguageContext);
+
+    const Teste: string[] = ["https://raw.githubusercontent.com/rafael-figueiredo-alves/eTasks/v2.0/assets/Screens/Conceitual_Mobile_Home_Light.png", "https://raw.githubusercontent.com/rafael-figueiredo-alves/eTasks/v2.0/assets/Screens/Conceitual_Mobile_Home_Dark.png"];
 
     return (
         <>
@@ -32,6 +35,7 @@ export const ProjectCard = (props: ProjectCardProps) => {
                     <div className="card-body">
                         <h5 className="card-title">{props.Project[props.Indice].Title}</h5>
                         <p className="card-text">{props.Project[props.Indice].Description}</p>
+                        <Carrousel Screenshots={Teste}/>
                         <Chip Kind={props.Project[props.Indice].Chip} />
                         <a href="#" className="btn btn-primary">Go somewhere</a>
                     </div>
