@@ -13,7 +13,7 @@ export const ProjectCard = (props: ProjectCardProps) => {
 
     return (
         <>
-            <div className="container-fluid">
+            <div className="container-fluid" style={{padding: '0px'}}>
                 <div className="card">
                     <div className="card-header">
                         <div className="row">

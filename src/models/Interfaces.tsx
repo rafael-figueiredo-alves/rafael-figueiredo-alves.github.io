@@ -53,6 +53,48 @@ export interface iProjects{
     Description: string,
     Chip: ChipKind
 }
+
+export interface Projects{
+    Title: string,
+    Version: string,
+    Description: string,
+    GithubLink: string,
+    Screenshots: string[],
+    Technology: ChipKind[],
+    Platform: ChipKind[],
+    Tags: string[],
+    Goals: Goals[],
+    Kind: ProjectKind[],
+    DownloadLink: DownloadLink[],
+    Site: string
+}
+
+interface Goals{
+    Goal: string,
+    Reached: boolean
+}
+
+export enum ProjectKind{
+    MobileApp,
+    DesktopApp,
+    Site,
+    Lib,
+    Componente,
+    WebApp,
+    API
+}
+
+interface DownloadLink{
+    Tipo: DownloadTipo,
+    Link: string
+}
+
+export enum DownloadTipo{
+    AndroidAPK,
+    WindowsExe,
+    LibZip,
+    Site
+}
 //#endregion
 
 //#region Interfaces das props do componente ProjectCard
@@ -64,3 +106,22 @@ export interface ProjectCardProps {
 }
 //#endregion
 
+//#region Interfaces do Modelo da Classe Linguagens e Frameworks
+export interface LanguagesFrameworks{
+    LanguageFramework: string,
+    Skills: string[],
+    ExtraInfo: string,
+    Description: string,
+    Level: number
+}
+//#endregion
+
+//#region Interfaces do Modelo de classe Ferramentas
+export interface Tools{
+    Tool: string,
+    Skills: string[],
+    ExtraInfo: string,
+    Level: number,
+    Description: string
+}
+//#endregion

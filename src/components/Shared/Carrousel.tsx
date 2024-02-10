@@ -1,13 +1,13 @@
 export const Carrousel = ({ Screenshots }: { Screenshots: string[] }) => {
     return (
         <>
-            <div id="carousel" className="carousel slide">
-                <div className="carousel-inner">
+            <div id="carousel" className="carousel carousel-dark slide">
+                <div className="carousel-inner" style={{width: '100%', height: '200px !important', objectFit: 'contain'}}>
                     {Screenshots.map((screenshot, Indice) => {
                         return (
                             <div key={screenshot} className={`carousel-item ${Indice == 0 ? 'active' : ''}`}>
-                                <div className="d-flex justify-content-center align-items-center" style={{ height: '100%', overflow: 'hidden' }}>
-                                <img src={screenshot} className="d-block w-100" alt="..." />
+                                <div className="d-flex justify-content-center align-items-center">
+                                <img src={screenshot} className="img-fluid" alt="..." />
                                 </div>
                             </div>
                         )
