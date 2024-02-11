@@ -36,6 +36,11 @@ export const Translations = {
         "UI-Elements":{
             "BtnAnterior" : "Anterior",
             "BtnProximo" : "Próximo"
+        },
+        "ErroPage":{
+            "Title" : "UH OH! Você se perdeu.",
+            "Msg" : "Sentimos muito, mas a página que está buscando não existe. Como você chegou aqui é um mistério. Mas para voltar basta apertar o botão abaixo.",
+            "BtnText" : "VOLTAR PARA PÁGINA INICIAL"
         }
     },
     "en" : {
@@ -75,6 +80,11 @@ export const Translations = {
         "UI-Elements":{
             "BtnAnterior" : "Previous",
             "BtnProximo" : "Next"
-        }        
+        },
+        "ErroPage":{
+            "Title" : "UH OH! It seems you're lost.",
+            "Msg" : "I'm sorry, but the page you're looking for doesn't exit. How you got here is a mystery. However you can come back by just clicking tbe button below.",
+            "BtnText" : "GO BACK HOME"
+        }      
     }    
 }
