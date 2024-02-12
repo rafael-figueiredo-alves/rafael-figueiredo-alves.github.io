@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from 'react'
-import PageProjectsImg from '/src/assets/PageProjectsImg.png'
+import PageProjectsImg from '/src/assets/PageTitleImg/PageProjectsImg.png'
 import { LanguageContext } from '../contexts/LanguageContext'
 import { PageTitle } from '../components/Shared/PageTitle'
 import { iProjects } from '../models/Interfaces'

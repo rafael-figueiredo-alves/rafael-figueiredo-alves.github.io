@@ -31,11 +31,12 @@ export const Translations = {
             "Titulo" : "Ferramentas que eu uso"
         },
         "Languages":{
-            "Titulo" : "Linguagens e Frameworks"
+            "Titulo" : "Linguagens e Frameworks",
+            "Skills" : "Habilidades:"
         },
         "UI-Elements":{
             "BtnAnterior" : "Anterior",
-            "BtnProximo" : "Próximo"
+            "BtnProximo" : "Próximo",
         },
         "ErroPage":{
             "Title" : "UH OH! Você se perdeu.",
@@ -75,7 +76,8 @@ export const Translations = {
             "Titulo" : "Tools I use"
         },
         "Languages":{
-            "Titulo" : "Languages and Frameworks"
+            "Titulo" : "Languages and Frameworks",
+            "Skills" : "Skills:"
         },
         "UI-Elements":{
             "BtnAnterior" : "Previous",

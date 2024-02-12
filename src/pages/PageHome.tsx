@@ -1,4 +1,4 @@
-import PageHomeImg from '/src/assets/PageHomeTitle.png'
+import PageHomeImg from '/src/assets/PageTitleImg/PageHomeTitle.png'
 
 import { useContext } from 'react'
 import { LanguageContext } from '../contexts/LanguageContext'

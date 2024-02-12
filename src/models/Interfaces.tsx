@@ -65,11 +65,31 @@ export enum DownloadTipo{
 
 //#region Interfaces do Modelo da Classe Linguagens e Frameworks
 export interface LanguagesFrameworks{
-    LanguageFramework: string,
-    Skills: string[],
-    ExtraInfo: string,
+    Name: string,
     Description: string,
-    Level: number
+    Skills: string[],
+    LangFramework: LangFramework
+}
+
+export enum LangFramework{
+    AspNet,
+    Blazor,
+    Bootstrap,
+    CSharp,
+    DartFlutter,
+    Delphi,
+    Excel,
+    HTMLCSS,
+    Javascript,
+    Lazarus,
+    Materialize,
+    NextJS,
+    NodeJS,
+    Python,
+    React,
+    Rust,
+    Typescript,
+    Vite
 }
 //#endregion
 

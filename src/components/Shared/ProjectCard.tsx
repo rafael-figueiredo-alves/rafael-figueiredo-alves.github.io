@@ -1,8 +1,8 @@
 import { useContext } from "react";
 import { LanguageContext } from "../../contexts/LanguageContext";
 import { ProjectCardProps } from "../../models/Interfaces";
-import BtnBack from '/src/assets/BtnBack.png';
-import BtnNext from '/src/assets/BtnNext.png';
+import BtnBack from '/src/assets/UI/BtnBack.png';
+import BtnNext from '/src/assets/UI/BtnNext.png';
 import { Chip } from "./Chip/Chip";
 import { Carrousel } from "./Carrousel";
 

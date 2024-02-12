@@ -1,5 +1,5 @@
 import { useContext } from 'react'
-import PageToolsImg from '/src/assets/PageToolsImg.png'
+import PageToolsImg from '/src/assets/PageTitleImg/PageToolsImg.png'
 import { LanguageContext } from '../contexts/LanguageContext'
 import { PageTitle } from '../components/Shared/PageTitle'
 

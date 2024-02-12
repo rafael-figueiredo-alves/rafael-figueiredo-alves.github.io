@@ -1,8 +1,7 @@
 import { useContext } from 'react'
-import PageAboutImg from '/src/assets/PageAboutImg.png'
+import PageAboutImg from '/src/assets/PageTitleImg/PageAboutImg.png'
 import { LanguageContext } from '../contexts/LanguageContext'
 import { PageTitle } from '../components/Shared/PageTitle'
-import { HorizontalCard } from '../components/Shared/HorizontalCard'
 
 const PageAbout = () => {
     const { Translate } = useContext(LanguageContext)
@@ -11,7 +10,6 @@ const PageAbout = () => {
     return (
         <>
             <PageTitle Image={PageAboutImg}>{Translate("About.Titulo", false)}</PageTitle>
-            <HorizontalCard />
         </>
     )
 }

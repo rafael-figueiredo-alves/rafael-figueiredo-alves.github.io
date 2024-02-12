@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import { PageTitle } from '../components/Shared/PageTitle'
-import PageExperienceImg from '/src/assets/PageExperienceImg.png'
+import PageExperienceImg from '/src/assets/PageTitleImg/PageExperienceImg.png'
 import { LanguageContext } from '../contexts/LanguageContext'
 
 const PageExperience = () => {
