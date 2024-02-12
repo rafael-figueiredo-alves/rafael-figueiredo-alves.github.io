@@ -1,5 +1,4 @@
-import { useContext } from 'react'
-import { LangFramework, LanguagesFrameworks } from '../../models/Interfaces'
+//#region Lista de Imagens
 import AspNetCard from '/src/assets/Cards/AspNetCard.png'
 import BlazorCard from '/src/assets/Cards/BlazorCard.png'
 import BootstrapCard from '/src/assets/Cards/BootstrapCard.png'
@@ -18,6 +17,10 @@ import ReactCard from '/src/assets/Cards/ReactCard.png'
 import RustCard from '/src/assets/Cards/RustCard.png'
 import TypescriptCard from '/src/assets/Cards/TypescriptCard.png'
 import ViteCard from '/src/assets/Cards/ViteCard.png'
+//#endregion
+
+import { useContext } from 'react'
+import { LangFramework, LanguagesFrameworks } from '../../models/Interfaces'
 import { LanguageContext } from '../../contexts/LanguageContext'
 
 export const LanguageFrameworkCards = ({Content}: {Content: LanguagesFrameworks[]}) => {
@@ -25,7 +28,7 @@ export const LanguageFrameworkCards = ({Content}: {Content: LanguagesFrameworks[
         <div className="row row-cols-1 row-cols-md-2 g-4">
 
         {Content.map(content => (
-            <LangCard Card={content} />
+            <LangCard key={content.LangFramework} Card={content} />
         ))}
 
         </div>
@@ -103,8 +106,8 @@ const LangCard = ({Card}:{Card:LanguagesFrameworks}) => {
 
     return(
         <div className="col">
-        <div className="card h-100">
-            <img src={GetImage(Card.LangFramework)} className="card-img-top" alt="..." />
+        <div className="card h-100"> 
+            <img src={GetImage(Card.LangFramework)} className="card-img-top" alt={Card.Name} style={{height: '100px'}} />
             <div className="card-body">
                 <h5 className="card-title">{Card.Name}</h5>
                 <p className="card-text">{Card.Description}</p>
@@ -112,7 +115,7 @@ const LangCard = ({Card}:{Card:LanguagesFrameworks}) => {
                 <strong>{Translate("Languages.Skills", false)}</strong>
                 <ul>
                 {Card.Skills.map(skill => (
-                    <li>{skill}</li>
+                    <li key={skill}>{skill}</li>
                 ))}
                 </ul>                
             </div>
