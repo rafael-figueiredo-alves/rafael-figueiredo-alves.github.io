@@ -26,6 +26,7 @@ import SQLite from '/src/components/Shared/Chip/Assets/SQLLite.png'
 import Typescript from '/src/components/Shared/Chip/Assets/Typescript.png'
 import Vite from '/src/components/Shared/Chip/Assets/Vite.png'
 import Windows from '/src/components/Shared/Chip/Assets/Windows.png'
+import Web from '/src/components/Shared/Chip/Assets/Web.png'
 import { ChipKind, ChipProps } from '../../../models/Interfaces'
 //#endregion
 
@@ -110,6 +111,9 @@ export const Chip = (props: ChipProps) => {
             case ChipKind.Windows:
                 ImageSrc = Windows;
                 break;
+            case ChipKind.Web:
+                ImageSrc = Web;
+                break;                
             default:
                 ImageSrc = Multiplatform;
         };

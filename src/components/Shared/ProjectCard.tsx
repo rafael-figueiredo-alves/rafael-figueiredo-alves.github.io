@@ -1,10 +1,15 @@
-import { useContext } from "react";
-import { LanguageContext } from "../../contexts/LanguageContext";
-import { ProjectCardProps } from "../../models/Interfaces";
+//#region Images sources
 import BtnBack from '/src/assets/UI/BtnBack.png';
 import BtnNext from '/src/assets/UI/BtnNext.png';
+//#endregion
+
+//#region Imports
+import { useContext } from "react";
+import { LanguageContext } from "../../contexts/LanguageContext";
+import { ChipKind, ProjectCardProps } from "../../models/Interfaces";
 import { Chip } from "./Chip/Chip";
 import { Carrousel } from "./Carrousel";
+//#endregion
 
 export const ProjectCard = (props: ProjectCardProps) => {
     const { Translate } = useContext(LanguageContext);

@@ -143,7 +143,8 @@ export enum ChipKind {
     SQLite = 22,
     Typescript = 23,
     Vite = 24,
-    Windows = 25
+    Windows = 25,
+    Web = 26
 }
 
 export interface ChipProps {

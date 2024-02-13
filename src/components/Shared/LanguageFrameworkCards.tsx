@@ -19,9 +19,11 @@ import TypescriptCard from '/src/assets/Cards/TypescriptCard.png'
 import ViteCard from '/src/assets/Cards/ViteCard.png'
 //#endregion
 
+//#region Imports
 import { useContext } from 'react'
 import { LangFramework, LanguagesFrameworks } from '../../models/Interfaces'
 import { LanguageContext } from '../../contexts/LanguageContext'
+//#endregion
 
 export const LanguageFrameworkCards = ({Content}: {Content: LanguagesFrameworks[]}) => {
     return (
