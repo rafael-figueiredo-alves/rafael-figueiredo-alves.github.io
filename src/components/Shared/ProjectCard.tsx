@@ -33,11 +33,17 @@ export const ProjectCard = (props: ProjectCardProps) => {
                         </div>
                     </div>
                     <div className="card-body">
-                        <h5 className="card-title">{props.Project[props.Indice].Title}</h5>
-                        <p className="card-text">{props.Project[props.Indice].Description}</p>
-                        <Carrousel Screenshots={Teste}/>
+                        <h5 className="card-title">Descrição</h5>
+                        <p className="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt atque praesentium est possimus accusamus fuga aperiam voluptate dolor, non eaque delectus, inventore maiores consectetur cumque. Iusto in voluptatem blanditiis. Eum.</p>
+                        <br />
+                        <h5 className="card-title">Tecnologias</h5>
                         <Chip Kind={props.Project[props.Indice].Chip} />
-                        <a href="#" className="btn btn-primary">Go somewhere</a>
+                        <br /><br />
+                        <h5 className="card-title">Plataformas</h5>
+                        <Chip Kind={props.Project[props.Indice].Chip} />
+                        <br /><br />
+                        <h5 className="card-title">Prints</h5>
+                        <Carrousel Screenshots={Teste}/>
                     </div>
                 </div>
             </div>

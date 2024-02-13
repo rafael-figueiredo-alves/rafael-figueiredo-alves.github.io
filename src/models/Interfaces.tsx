@@ -97,9 +97,12 @@ export enum LangFramework{
 export interface Tools{
     Tool: string,
     Skills: string[],
-    ExtraInfo: string,
-    Level: number,
-    Description: string
+    Description: string,
+    ToolImg: ToolImg
+}
+
+export enum ToolImg{
+    
 }
 //#endregion
 
