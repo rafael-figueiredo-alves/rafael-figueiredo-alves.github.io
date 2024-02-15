@@ -6,7 +6,7 @@ import BtnNext from '/src/assets/UI/BtnNext.png';
 //#region Imports
 import { useContext } from "react";
 import { LanguageContext } from "../../contexts/LanguageContext";
-import { ChipKind, ProjectCardProps } from "../../models/Interfaces";
+import { ProjectCardProps } from "../../models/Interfaces";
 import { Chip } from "./Chip/Chip";
 import { Carrousel } from "./Carrousel";
 //#endregion

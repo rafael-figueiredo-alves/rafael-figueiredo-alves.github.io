@@ -2,6 +2,7 @@ import { useContext } from 'react'
 import { PageTitle } from '../components/Shared/PageTitle'
 import PageExperienceImg from '/src/assets/PageTitleImg/PageExperienceImg.png'
 import { LanguageContext } from '../contexts/LanguageContext'
+import { ExperienceTimeline } from '../components/ExperienceTimeline'
 
 const PageExperience = () => {
     const {Translate} = useContext(LanguageContext);
@@ -9,6 +10,7 @@ const PageExperience = () => {
     return(
         <>
         <PageTitle Image={PageExperienceImg}>{Translate("Experience.Titulo", false)}</PageTitle>
+        <ExperienceTimeline />
         </>
     )
 }
