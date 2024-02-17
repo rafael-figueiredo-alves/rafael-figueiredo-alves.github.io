@@ -13,7 +13,8 @@ export const Translations = {
             "Tip" : 'Change language'
         },
         "Home" :{
-            "Titulo" : "Seja bem vindo!"
+            "Titulo" : "Seja bem vindo!",
+            "BoasVindas" : "Olá! Seja bem vindo ao meu portfólio. Sou desenvolvedor fullstack e gostaria, com esse site, de compartilhar meus projetos, minhas ideias, ferramentas que uso, linguagens e frameworks que uso e estudo e minha experiência e habilidades."
         },
         "About":{
             "Titulo" : "Sobre mim"
@@ -58,7 +59,8 @@ export const Translations = {
             "Tip" : 'Trocar idioma'
         },        
         "Home" :{
-            "Titulo" : "Welcome!"
+            "Titulo" : "Welcome!",
+            "BoasVindas" : "Hi! Welcome to my portfolio. I'm a fullstack developer and I'd like, with this site, to share my projects,ideas, tools I use, languages and frameworks I use at work and study about and, also, my experience and skills."
         },
         "About":{
             "Titulo" : "About me"          
