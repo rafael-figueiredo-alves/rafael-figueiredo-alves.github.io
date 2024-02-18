@@ -7,7 +7,11 @@ const PageTools = () => {
     const {Translate} = useContext(LanguageContext)
 
     return(
+        <>
         <PageTitle Image={PageToolsImg}>{Translate("Tools.Titulo", false)}</PageTitle>
+        <p style={{fontSize: '1.5rem'}}><i className="fa-regular fa-circle-check"/> Teste objetivo</p>
+        <p style={{fontSize: '1.5rem'}}><i className="fa-regular fa-circle"/> Teste de Objetivo 2</p>
+        </>
     )
 }
 
