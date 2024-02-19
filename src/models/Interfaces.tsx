@@ -35,7 +35,7 @@ export interface Projects{
     Site: string
 }
 
-interface Goals{
+export interface Goals{
     Goal: string,
     Reached: boolean
 }
@@ -46,11 +46,12 @@ export enum ProjectKind{
     Site,
     Lib,
     Componente,
-    WebApp,
+    ConsoleApp,
+    WebAPP,
     API
 }
 
-interface DownloadLink{
+export interface DownloadLink{
     Tipo: DownloadTipo,
     Link: string
 }
