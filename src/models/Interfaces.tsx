@@ -60,6 +60,9 @@ export enum DownloadTipo{
     AndroidAPK,
     WindowsExe,
     LibZip,
+    NuGet,
+    SourceCodeZip,
+    NPM,
     Site
 }
 //#endregion
@@ -103,7 +106,29 @@ export interface Tools{
 }
 
 export enum ToolImg{
-    
+    Word,
+    Excel,
+    PowerPoint,
+    Access,
+    Publisher,
+    SQLManagement,
+    SQLLite,
+    SQLServer,
+    Lunacy,
+    Figma,
+    PenPot,
+    GIMP,
+    Firebase,
+    MySQL,
+    MongoDB,
+    VS,
+    RadStudio,
+    VSCode,
+    Github,
+    Bitbucket,
+    NPM,
+    NuGet,
+    Git
 }
 //#endregion
 
