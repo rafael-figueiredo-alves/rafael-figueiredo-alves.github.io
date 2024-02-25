@@ -6,9 +6,11 @@ import BtnNext from '/src/assets/UI/BtnNext.png';
 //#region Imports
 import { useContext } from "react";
 import { LanguageContext } from "../../contexts/LanguageContext";
-import { ProjectCardProps } from "../../models/Interfaces";
+import { ProjectCardProps, ProjectKind } from "../../models/Interfaces";
 import { Chip } from "./Chip/Chip";
 import { Carrousel } from "./Carrousel";
+import { ProjectKindBadge } from './ProjectKindBadges/ProjectKindBadge';
+import { DownloadButton } from './DownloadButton/DownloadButton';
 //#endregion
 
 export const ProjectCard = (props: ProjectCardProps) => {
@@ -38,6 +40,17 @@ export const ProjectCard = (props: ProjectCardProps) => {
                         </div>
                     </div>
                     <div className="card-body">
+                        <h5 className="card-title">Versão</h5>
+                        <div className='row'>
+                            <div className='col-6 text-start'>
+                                1.0.0
+                            </div>
+                            <div className='col-6 text-end'>
+                                <ProjectKindBadge Kind={ProjectKind.DesktopApp} />
+                                <ProjectKindBadge Kind={ProjectKind.MobileApp} />
+                                <ProjectKindBadge Kind={ProjectKind.API} />
+                            </div>
+                        </div>
                         <h5 className="card-title">Descrição</h5>
                         <p className="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt atque praesentium est possimus accusamus fuga aperiam voluptate dolor, non eaque delectus, inventore maiores consectetur cumque. Iusto in voluptatem blanditiis. Eum.</p>
                         <br />
@@ -49,6 +62,7 @@ export const ProjectCard = (props: ProjectCardProps) => {
                         <br /><br />
                         <h5 className="card-title">Prints</h5>
                         <Carrousel Screenshots={Teste}/>
+                        <DownloadButton />
                     </div>
                 </div>
             </div>

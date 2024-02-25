@@ -47,7 +47,6 @@ export enum ProjectKind{
     Lib,
     Componente,
     ConsoleApp,
-    WebAPP,
     API
 }
 

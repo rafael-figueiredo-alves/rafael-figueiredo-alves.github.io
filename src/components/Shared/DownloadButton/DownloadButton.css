@@ -1,0 +1,11 @@
+.btnNormal {
+    background-color: #336699 !important;
+}
+
+.btnNormal:hover {
+    background-color: #0d68c4 !important;  
+}
+
+.btnNormal:active {
+    background-color: #336699 !important;
+}
