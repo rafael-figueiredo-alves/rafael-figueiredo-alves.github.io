@@ -52,6 +52,15 @@ export const Translations = {
             "Component" : "Componente",
             "ConsoleApp" : "Aplicação Console",
             "API" : "API"
+        },
+        "DownloadTipo": {
+            "Android"    : "Baixe o APK para Android",
+            "Windows"    : "Baixe o Executável para Windows",
+            "LibZip"     : "Baixe o ZIP da Lib (Biblioteca)",
+            "NuGet"      : "Baixe via NuGet",
+            "SourceCode" : "Baixe o código fonte em ZIP",
+            "NPM"        : "Baixe via NPM",
+            "Site"       : "Visite o projeto online"
         }
     },
     "en" : {
@@ -107,6 +116,15 @@ export const Translations = {
             "Component" : "Component",
             "ConsoleApp" : "Console App / CLI App",
             "API" : "API"
+        },
+        "DownloadTipo": {
+            "Android"    : "Download APK for Android",
+            "Windows"    : "Download Windows executable",
+            "LibZip"     : "Download Lib's ZIP (Library)",
+            "NuGet"      : "Download on NuGet",
+            "SourceCode" : "Download Source Code's ZIP",
+            "NPM"        : "Download on NPM",
+            "Site"       : "Visit online Project"
         }
     }    
 }
