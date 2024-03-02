@@ -6,7 +6,7 @@ import BtnNext from '/src/assets/UI/BtnNext.png';
 //#region Imports
 import { useContext } from "react";
 import { LanguageContext } from "../../contexts/LanguageContext";
-import { ProjectCardProps, ProjectKind } from "../../models/Interfaces";
+import { DownloadTipo, ProjectCardProps, ProjectKind } from "../../models/Interfaces";
 import { Chip } from "./Chip/Chip";
 import { Carrousel } from "./Carrousel";
 import { ProjectKindBadge } from './ProjectKindBadges/ProjectKindBadge';
@@ -62,7 +62,7 @@ export const ProjectCard = (props: ProjectCardProps) => {
                         <br /><br />
                         <h5 className="card-title">Prints</h5>
                         <Carrousel Screenshots={Teste}/>
-                        <DownloadButton />
+                        <DownloadButton Tipo={DownloadTipo.AndroidAPK} />
                     </div>
                 </div>
             </div>
