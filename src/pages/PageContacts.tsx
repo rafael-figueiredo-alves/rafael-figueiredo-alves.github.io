@@ -1,3 +1,4 @@
+import '/src/pages/PageContacts.css'
 import PageContactsImg from '/src/assets/PageTitleImg/PageContactsTitle.png'
 import { PageTitle } from '../components/Shared/PageTitle'
 import { LanguageContext } from '../contexts/LanguageContext';
@@ -9,82 +10,61 @@ const PageContacts = () => {
     return (
         <>
             <PageTitle Image={PageContactsImg}>{Translate("Contacts.Titulo", false)}</PageTitle>
-            <section className="mb-4">
-
-                <p className="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact us directly. Our team will come back to you within
-                    a matter of hours to help you.</p>
-
-                <div className="row">
-
-                    <div className="col-md-9 mb-md-0 mb-5">
-                        <form id="contact-form" name="contact-form" action="mail.php" method="POST">
-
-                            <div className="row">
-
-                                <div className="col-md-6">
-                                    <div className="md-form mb-0">
-                                        <input type="text" id="name" name="name" className="form-control" />
-                                        <label htmlFor="name" className="">Your name</label>
-                                    </div>
+            <div className="container px-2 my-2">
+                <div className="row justify-content-center">
+                    <div className="col-lg-8">
+                        <div className="card border-0 rounded-3 shadow-lg">
+                            <div className="card-body p-4">
+                                <div className="text-center">
+                                    <div className="h1 fw-light">{Translate("Contacts.FormTitle", false)}</div>
+                                    <p className="mb-4 text-muted">{Translate("Contacts.Message", false)}</p>
                                 </div>
 
-                                <div className="col-md-6">
-                                    <div className="md-form mb-0">
-                                        <input type="text" id="email" name="email" className="form-control" />
-                                        <label htmlFor="email" className="">Your email</label>
+                                <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+
+                                    <div className="form-floating mb-3">
+                                        <input className="form-control" id="name" type="text" placeholder="Name" data-sb-validations="required" />
+                                        <label form="name">{Translate("Contacts.Name", false)}</label>
+                                        <div className="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
                                     </div>
-                                </div>
+
+                                    <div className="form-floating mb-3">
+                                        <input className="form-control" id="emailAddress" type="email" placeholder="Email Address" data-sb-validations="required,email" />
+                                        <label form="emailAddress">{Translate("Contacts.Email", false)}</label>
+                                        <div className="invalid-feedback" data-sb-feedback="emailAddress:required">Email Address is required.</div>
+                                        <div className="invalid-feedback" data-sb-feedback="emailAddress:email">Email Address Email is not valid.</div>
+                                    </div>
+
+                                    <div className="form-floating mb-3">
+                                        <textarea className="form-control" id="message" placeholder="Message" style={{ height: "10rem" }} data-sb-validations="required"></textarea>
+                                        <label form="message">{Translate("Contacts.Msg", false)}</label>
+                                        <div className="invalid-feedback" data-sb-feedback="message:required">Message is required.</div>
+                                    </div>
+
+
+                                    <div className="d-none" id="submitSuccessMessage">
+                                        <div className="text-center mb-3">
+                                            <div className="fw-bolder">Form submission successful!</div>
+                                            <p>To activate this form, sign up at</p>
+                                            <a href="https://startbootstrap.com/solution/contact-forms">https://startbootstrap.com/solution/contact-forms</a>
+                                        </div>
+                                    </div>
+
+                                    <div className="d-none" id="submitErrorMessage">
+                                        <div className="text-center text-danger mb-3">Error sending message!</div>
+                                    </div>
+
+                                    <div className="d-grid">
+                                        <button className="btn btn-primary btn-lg" id="submitButton" type="submit">{Translate("Contacts.Button", false)}</button>
+                                    </div>
+                                </form>
+
 
                             </div>
-
-                            <div className="row">
-                                <div className="col-md-12">
-                                    <div className="md-form mb-0">
-                                        <input type="text" id="subject" name="subject" className="form-control" />
-                                        <label htmlFor="subject" className="">Subject</label>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div className="row">
-
-                                <div className="col-md-12">
-
-                                    <div className="md-form">
-                                        <textarea id="message" name="message" rows={2} className="form-control md-textarea"></textarea>
-                                        <label htmlFor="message">Your message</label>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                        </form>
-
-                        <div className="text-center text-md-left">
-                            <a className="btn btn-primary" >Send</a>
                         </div>
-                        <div className="status"></div>
-                    </div>
-
-
-                    <div className="col-md-3 text-center">
-                        <ul className="list-unstyled mb-0">
-                            <li><i className="fas fa-map-marker-alt fa-2x"></i>
-                                <p>San Francisco, CA 94126, USA</p>
-                            </li>
-
-                            <li><i className="fas fa-phone mt-4 fa-2x"></i>
-                                <p>+ 01 234 567 89</p>
-                            </li>
-
-                            <li><i className="fas fa-envelope mt-4 fa-2x"></i>
-                                <p>contact@mdbootstrap.com</p>
-                            </li>
-                        </ul>
                     </div>
                 </div>
-
-            </section>
+            </div>
 
 
         </>

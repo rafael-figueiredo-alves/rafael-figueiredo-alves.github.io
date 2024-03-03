@@ -20,7 +20,13 @@ export const Translations = {
             "Titulo" : "Sobre mim"
         },
         "Contacts":{
-            "Titulo" : "Entre em contato"
+            "Titulo" : "Entre em contato",
+            "FormTitle" : "Deixe-me uma mensagem",
+            "Message" : "Fico feliz que queira me deixar uma mensagem. Vá em frente. Digite seu nome, e-mail e mensagem e clique em enviar. Eu ficarei feliz em te responder o mais breve possível.",
+            "Name" : "Qual é seu nome?",
+            "Email" : "E seu endereço de e-mail?",
+            "Msg" :"Digite sua mensagem aqui",
+            "Button" : "Envie sua mensagem"
         },
         "Experience":{
             "Titulo" : "Minha experiência e habilidades"
@@ -84,7 +90,13 @@ export const Translations = {
             "Titulo" : "About me"          
         },
         "Contacts":{
-            "Titulo" : "Keep in touch"
+            "Titulo" : "Keep in touch",
+            "FormTitle" : "Leave me a message",
+            "Message" : "I'm glad you want to leave me a message. Go ahead. Type your name, e-mail address, message and submit. I'll be happy to read it and answer as soon as possible.",
+            "Name" : "What's your name?",
+            "Email" : "And your e-mail address?",
+            "Msg" :"Type your message here",
+            "Button" : "Submit your message"
         },
         "Experience":{
             "Titulo" : "My experience and skills"
