@@ -7,19 +7,19 @@ import RzSistemas from '/src/assets/Experience/RZ.png'
 import CCAA from '/src/assets/Experience/CCAA.png'
 
 const PageExperience = () => {
-    const {Translate} = useContext(LanguageContext);
+    const { Translate } = useContext(LanguageContext);
 
-    return(
+    return (
         <>
-        <PageTitle Image={PageExperienceImg}>{Translate("Experience.Titulo", false)}</PageTitle>
-        <div className='row'>
-            <div className='col-2'>
-            <img src={RzSistemas} height={100} width={100} />
+            <PageTitle Image={PageExperienceImg}>{Translate("Experience.Titulo", false)}</PageTitle>
+            <div className='row'>
+                <div className='col-2'>
+                    <img src={RzSistemas} height={100} width={100} />
+                </div>
+                <div className='col-10'>
+                    <h5>Rz Sistemas LTDA</h5>
+                </div>
             </div>
-            <div className='col-10'>
-            <h5>Rz Sistemas LTDA</h5>
-            </div>
-        </div>
             <div className="row">
                 <div className="col-md-12">
                     <h5 className='Titulo_Habilidades'>Habilidades e/ou Destaques</h5>
@@ -71,16 +71,16 @@ const PageExperience = () => {
                         </a>
                     </div>
                 </div>
-                </div>
+            </div>
 
-                <div className='row'>
+            <div className='row'>
                 <div className='col-2'>
-            <img src={CCAA} height={100} width={144.25} />
+                    <img src={CCAA} height={100} width={144.25} />
+                </div>
+                <div className='col-10'>
+                    <h5>CCAA</h5>
+                </div>
             </div>
-            <div className='col-10'>
-            <h5>CCAA</h5>
-            </div>
-        </div>
             <div className="row">
                 <div className="col-md-12">
                     <div className="main-timeline">
@@ -122,7 +122,7 @@ const PageExperience = () => {
                         </a>
                     </div>
                 </div>
-                </div>
+            </div>
         </>
     )
 }

@@ -127,7 +127,8 @@ export enum ToolImg{
     Bitbucket,
     NPM,
     NuGet,
-    Git
+    Git,
+    VirtualBox
 }
 //#endregion
 
