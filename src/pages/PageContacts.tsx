@@ -2,14 +2,20 @@ import '/src/pages/PageContacts.css'
 import PageContactsImg from '/src/assets/PageTitleImg/PageContactsTitle.png'
 import { PageTitle } from '../components/Shared/PageTitle'
 import { LanguageContext } from '../contexts/LanguageContext';
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
+import { PageTitleContext, Pages } from '../contexts/PageTitleContext';
 
 const PageContacts = () => {
     const { Translate } = useContext(LanguageContext);
+    const { ChangePage } = useContext(PageTitleContext);
+
+    useEffect(() => ChangePage(Pages.Contatcs), []);
 
     return (
         <>
+         <div className='d-md-none'>
             <PageTitle Image={PageContactsImg}>{Translate("Contacts.Titulo", false)}</PageTitle>
+            </div>
             <div className="container px-2 my-2">
                 <div className="row justify-content-center">
                     <div className="col-lg-8">

@@ -128,7 +128,15 @@ export enum ToolImg{
     NPM,
     NuGet,
     Git,
-    VirtualBox
+    VirtualBox,
+    Outlook,
+    Thunderbird,
+    MariaDB,
+    HeidiSQL,
+    ChatGPT,
+    Copilot,
+    Edge,
+    Chrome
 }
 //#endregion
 

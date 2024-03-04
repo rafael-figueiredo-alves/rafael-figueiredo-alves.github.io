@@ -1,11 +1,15 @@
 import '/src/pages/PageHome.css'
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import { LanguageContext } from '../contexts/LanguageContext'
 import { useNavigate } from 'react-router-dom'
+import { PageTitleContext, Pages } from '../contexts/PageTitleContext'
 
 const PageHome = () => {
   const { Translate } = useContext(LanguageContext)
   const Navigate = useNavigate()
+  const { ChangePage } = useContext(PageTitleContext)
+
+  useEffect(() => ChangePage(Pages.Home), [])
 
   return (
     <>

@@ -1,17 +1,23 @@
 import '/src/pages/PageExperience.css'
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import { PageTitle } from '../components/Shared/PageTitle'
 import PageExperienceImg from '/src/assets/PageTitleImg/PageExperienceImg.png'
 import { LanguageContext } from '../contexts/LanguageContext'
 import RzSistemas from '/src/assets/Experience/RZ.png'
 import CCAA from '/src/assets/Experience/CCAA.png'
+import { PageTitleContext, Pages } from '../contexts/PageTitleContext'
 
 const PageExperience = () => {
     const { Translate } = useContext(LanguageContext);
+    const { ChangePage } = useContext(PageTitleContext);
+
+    useEffect(() => ChangePage(Pages.Experience), []);
 
     return (
         <>
+        <div className='d-md-none'>
             <PageTitle Image={PageExperienceImg}>{Translate("Experience.Titulo", false)}</PageTitle>
+            </div>
             <div className='row'>
                 <div className='col-2'>
                     <img src={RzSistemas} height={100} width={100} />

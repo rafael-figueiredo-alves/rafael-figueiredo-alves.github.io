@@ -5,11 +5,15 @@ import { PageTitle } from '../components/Shared/PageTitle'
 import { iProjects } from '../models/Interfaces'
 import { GetDataFromJSONService } from '../services/GetDataFromJSONService'
 import { ProjectCard } from '../components/Shared/ProjectCard'
+import { PageTitleContext, Pages } from '../contexts/PageTitleContext'
 
 const PageProjects = () => {
     const {CurrentLanguage, Translate} = useContext(LanguageContext)
     const [projects, setProjects] = useState<iProjects[]>([])
     const [indice, setIndice] = useState<number>(0);
+    const { ChangePage } = useContext(PageTitleContext)
+
+    useEffect(() => ChangePage(Pages.Projects), [])
 
     useEffect(() => { GetDataFromJSONService<iProjects>('projects', CurrentLanguage).then(data => setProjects(() => data)) }, [CurrentLanguage])
 
@@ -27,7 +31,9 @@ const PageProjects = () => {
 
     return(
         <>
+        <div className='d-md-none'>
         <PageTitle Image={PageProjectsImg}>{Translate("Projects.Titulo", false)}</PageTitle>
+        </div>
 
         {projects.length > 0 && (
             <ProjectCard Project={projects} Indice={indice} BtnAnteriorClick={Anterior} BtnProximoClick={Proximo}/>
