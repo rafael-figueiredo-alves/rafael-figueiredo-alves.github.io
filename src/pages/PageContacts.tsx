@@ -26,7 +26,7 @@ const PageContacts = () => {
                                     <p className="mb-4 text-muted">{Translate("Contacts.Message", false)}</p>
                                 </div>
 
-                                <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                                <form id="contactForm" onSubmit={}>
 
                                     <div className="form-floating mb-3">
                                         <input className="form-control" id="name" type="text" placeholder="Name" data-sb-validations="required" />

@@ -140,6 +140,12 @@ export enum ToolImg{
 }
 //#endregion
 
+export interface ContactMessage {
+    Name: string,
+    Email: string,
+    Message: string
+}
+
 //#region Interfaces dos componentes
 
 //#region Interfaces das props do componente ProjectCard
