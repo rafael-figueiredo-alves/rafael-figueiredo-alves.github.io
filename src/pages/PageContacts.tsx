@@ -2,12 +2,49 @@ import '/src/pages/PageContacts.css'
 import PageContactsImg from '/src/assets/PageTitleImg/PageContactsTitle.png'
 import { PageTitle } from '../components/Shared/PageTitle'
 import { LanguageContext } from '../contexts/LanguageContext';
-import { useContext, useEffect } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { PageTitleContext, Pages } from '../contexts/PageTitleContext';
+import { ContactMessage } from '../models/Interfaces';
+import { SendDataToJSONService } from '../services/SendDataToJSONService';
+import { Modal } from '../components/Shared/Modal';
 
 const PageContacts = () => {
     const { Translate } = useContext(LanguageContext);
     const { ChangePage } = useContext(PageTitleContext);
+
+    const [ Name, setName ] = useState('');
+    const [ Email, setEmail ] = useState('');
+    const [ Message, setMessage ] = useState('');
+
+    const ChangeName = (e:any) => {
+        setName(() => e.target.value);       
+    }
+
+    const ChangeEmail = (e:any) => {
+        setEmail(() => e.target.value);       
+    }
+
+    const ChangeMessage = (e:any) => {
+        setMessage(() => e.target.value);       
+    }
+
+    const OnSubmit = (e: any) => {
+        e.preventDefault();
+        let msg : ContactMessage = {
+            Name : Name,
+            Email: Email,
+            Message: Message,
+            DataHora: new Date(Date.now())
+        };
+        SendDataToJSONService(msg);
+        setShow(() => true);
+    }
+
+    const [ show, setShow ] = useState(false);
+
+    const onClose = () =>{
+        setShow(() => !show)
+    }
 
     useEffect(() => ChangePage(Pages.Contatcs), []);
 
@@ -26,23 +63,23 @@ const PageContacts = () => {
                                     <p className="mb-4 text-muted">{Translate("Contacts.Message", false)}</p>
                                 </div>
 
-                                <form id="contactForm" onSubmit={}>
+                                <form id="contactForm" onSubmit={OnSubmit}>
 
                                     <div className="form-floating mb-3">
-                                        <input className="form-control" id="name" type="text" placeholder="Name" data-sb-validations="required" />
+                                        <input className="form-control" id="name" type="text" placeholder="Name" data-sb-validations="required" value={Name} onChange={ChangeName} />
                                         <label form="name">{Translate("Contacts.Name", false)}</label>
                                         <div className="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
                                     </div>
 
                                     <div className="form-floating mb-3">
-                                        <input className="form-control" id="emailAddress" type="email" placeholder="Email Address" data-sb-validations="required,email" />
+                                        <input className="form-control" id="emailAddress" type="email" placeholder="Email Address" data-sb-validations="required,email" value={Email} onChange={ChangeEmail} />
                                         <label form="emailAddress">{Translate("Contacts.Email", false)}</label>
                                         <div className="invalid-feedback" data-sb-feedback="emailAddress:required">Email Address is required.</div>
                                         <div className="invalid-feedback" data-sb-feedback="emailAddress:email">Email Address Email is not valid.</div>
                                     </div>
 
                                     <div className="form-floating mb-3">
-                                        <textarea className="form-control" id="message" placeholder="Message" style={{ height: "10rem" }} data-sb-validations="required"></textarea>
+                                        <textarea className="form-control" id="message" placeholder="Message" style={{ height: "10rem" }} data-sb-validations="required" value={Message} onChange={ChangeMessage}></textarea>
                                         <label form="message">{Translate("Contacts.Msg", false)}</label>
                                         <div className="invalid-feedback" data-sb-feedback="message:required">Message is required.</div>
                                     </div>
@@ -72,6 +109,7 @@ const PageContacts = () => {
                 </div>
             </div>
 
+            <Modal show={show} Message='Obrigado por sua mensagem. Irei ler ela o mais breve possível' Title='Mensagem enviada com sucesso' onClose={onClose} />
 
         </>
     )

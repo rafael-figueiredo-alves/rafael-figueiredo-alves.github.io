@@ -143,7 +143,8 @@ export enum ToolImg{
 export interface ContactMessage {
     Name: string,
     Email: string,
-    Message: string
+    Message: string,
+    DataHora: Date
 }
 
 //#region Interfaces dos componentes
