@@ -26,7 +26,9 @@ export const Translations = {
             "Name" : "Qual é seu nome?",
             "Email" : "E seu endereço de e-mail?",
             "Msg" :"Digite sua mensagem aqui",
-            "Button" : "Envie sua mensagem"
+            "Button" : "Envie sua mensagem",
+            "MsgTitle": "Mensagem enviada com sucesso",
+            "MsgBody": "Muito obrigado por sua mensagem. Logo que possível, estarei lendo e respondendo ela."
         },
         "Experience":{
             "Titulo" : "Minha experiência e habilidades"
@@ -96,7 +98,9 @@ export const Translations = {
             "Name" : "What's your name?",
             "Email" : "And your e-mail address?",
             "Msg" :"Type your message here",
-            "Button" : "Submit your message"
+            "Button" : "Submit your message",
+            "MsgTitle": "Message sent successfully",
+            "MsgBody": "Thanks for your message. As soon as possible, I'll be reading and anwsering it."
         },
         "Experience":{
             "Titulo" : "My experience and skills"

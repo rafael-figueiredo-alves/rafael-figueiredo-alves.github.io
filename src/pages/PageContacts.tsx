@@ -109,7 +109,7 @@ const PageContacts = () => {
                 </div>
             </div>
 
-            <Modal show={show} Message='Obrigado por sua mensagem. Irei ler ela o mais breve possível' Title='Mensagem enviada com sucesso' onClose={onClose} />
+            <Modal show={show} Message={Translate("Contacts.MsgBody", false)} Title={Translate("Contacts.MsgTitle", false)} onClose={onClose} />
 
         </>
     )
