@@ -43,7 +43,14 @@ const PageContacts = () => {
     const [ show, setShow ] = useState(false);
 
     const onClose = () =>{
-        setShow(() => !show)
+        setShow(() => false)
+        ClearFields();
+    }
+
+    const ClearFields = () => {
+        setName(() => "");
+        setEmail(() => "");
+        setMessage(() => "");
     }
 
     useEffect(() => ChangePage(Pages.Contatcs), []);
@@ -66,7 +73,7 @@ const PageContacts = () => {
                                 <form id="contactForm" onSubmit={OnSubmit}>
 
                                     <div className="form-floating mb-3">
-                                        <input className="form-control" id="name" type="text" placeholder="Name" data-sb-validations="required" value={Name} onChange={ChangeName} />
+                                        <input autoFocus className="form-control" id="name" type="text" placeholder="Name" data-sb-validations="required" value={Name} onChange={ChangeName} />
                                         <label form="name">{Translate("Contacts.Name", false)}</label>
                                         <div className="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
                                     </div>
