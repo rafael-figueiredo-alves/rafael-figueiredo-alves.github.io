@@ -2,7 +2,7 @@ import { useContext, useEffect } from 'react'
 import PageToolsImg from '/src/assets/PageTitleImg/PageToolsImg.png'
 import { LanguageContext } from '../contexts/LanguageContext'
 import { PageTitle } from '../components/Shared/PageTitle'
-import { ToolImg, Tools } from '../models/Interfaces'
+import { Tools } from '../models/Interfaces'
 import { ToolCard } from '../components/Shared/ToolCard'
 import { PageTitleContext, Pages } from '../contexts/PageTitleContext'
 
@@ -12,7 +12,7 @@ const PageTools = () => {
 
     useEffect(() => ChangePage(Pages.Tools), [])
 
-    let Teste: Tools = { ToolImg: ToolImg.Access, Tool: "Teste do Componente", Description: "Teste da descrção que será carregada para  aferramenta em questão", Skills: ["Habilidade 1", "Habilidade 2"] };
+    let Teste: Tools[] = []; //[{ ToolImg: ToolImg.Access, Tool: "Teste do Componente", Description: "Teste da descrção que será carregada para  aferramenta em questão", Skills: ["Habilidade 1", "Habilidade 2"] }, { ToolImg: ToolImg.Access, Tool: "Teste do Componente", Description: "Teste da descrção que será carregada para  aferramenta em questão", Skills: ["Habilidade 1", "Habilidade 2"] }];
 
     return (
         <>
@@ -22,10 +22,9 @@ const PageTools = () => {
 
             <div className="container">
                 <div className="row">
-                    <ToolCard Tool={Teste} />
-                    <ToolCard Tool={Teste} />
-                    <ToolCard Tool={Teste} />
-                    <ToolCard Tool={Teste} />
+                    {Teste.length > 0 ? Teste.map((Tool: Tools, Indice: number) => {
+                        return <ToolCard key={Indice} Tool={Tool} />
+                    }) : <p>Não foram encontradas ferramentas</p>}
                 </div>
             </div>
         </>

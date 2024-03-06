@@ -15,17 +15,19 @@ const PageExperience = () => {
 
     return (
         <>
-        <div className='d-md-none'>
-            <PageTitle Image={PageExperienceImg}>{Translate("Experience.Titulo", false)}</PageTitle>
+            <div className='d-md-none'>
+                <PageTitle Image={PageExperienceImg}>{Translate("Experience.Titulo", false)}</PageTitle>
             </div>
+
             <div className='row'>
-                <div className='col-2'>
+                <div className='col-1'>
                     <img src={RzSistemas} height={100} width={100} />
                 </div>
-                <div className='col-10'>
+                <div className='col-10' style={{marginLeft: "10px"}}>
                     <h5>Rz Sistemas LTDA</h5>
                 </div>
             </div>
+
             <div className="row">
                 <div className="col-md-12">
                     <h5 className='Titulo_Habilidades'>Habilidades e/ou Destaques</h5>
@@ -80,15 +82,16 @@ const PageExperience = () => {
             </div>
 
             <div className='row'>
-                <div className='col-2'>
-                    <img src={CCAA} height={100} width={144.25} />
+                <div className='col-1'>
+                    <img src={CCAA} height={100} width={100} />
                 </div>
-                <div className='col-10'>
+                <div className='col-10' style={{marginLeft: "10px"}}>
                     <h5>CCAA</h5>
                 </div>
             </div>
             <div className="row">
                 <div className="col-md-12">
+                    <h5 className='Titulo_Habilidades'>Habilidades e/ou Destaques</h5>
                     <div className="main-timeline">
                         <a href="#" className="timeline">
                             <div className="timeline-icon"><i className="fa fa-chalkboard-user"></i></div>

@@ -11,12 +11,14 @@ import { Chip } from "./Chip/Chip";
 import { Carrousel } from "./Carrousel";
 import { ProjectKindBadge } from './ProjectKindBadges/ProjectKindBadge';
 import { DownloadButton } from './DownloadButton/DownloadButton';
+import { Tags } from './Tags';
 //#endregion
 
 export const ProjectCard = (props: ProjectCardProps) => {
     const { Translate } = useContext(LanguageContext);
 
     const Teste: string[] = ["https://raw.githubusercontent.com/rafael-figueiredo-alves/eTasks/v2.0/assets/Screens/Conceitual_Mobile_Home_Light.png", "https://raw.githubusercontent.com/rafael-figueiredo-alves/eTasks/v2.0/assets/Screens/Conceitual_Mobile_Home_Dark.png"];
+    let marcas: string[] = ["Delphi","Portfolio","C Sharp","Flutter","Firebase","Sitema de vendas","Praticando","Delphi","Portfolio","C Sharp","Flutter","Firebase","Sitema de vendas","Praticando","Delphi","Portfolio","C Sharp","Flutter","Firebase","Sitema de vendas","Praticando"];
 
     return (
         <>
@@ -63,6 +65,7 @@ export const ProjectCard = (props: ProjectCardProps) => {
                         <h5 className="card-title">Prints</h5>
                         <Carrousel Screenshots={Teste}/>
                         <DownloadButton Tipo={DownloadTipo.AndroidAPK} />
+                        <Tags TagList={marcas} />
                     </div>
                 </div>
             </div>

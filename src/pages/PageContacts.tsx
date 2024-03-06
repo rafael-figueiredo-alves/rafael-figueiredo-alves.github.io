@@ -12,26 +12,26 @@ const PageContacts = () => {
     const { Translate } = useContext(LanguageContext);
     const { ChangePage } = useContext(PageTitleContext);
 
-    const [ Name, setName ] = useState('');
-    const [ Email, setEmail ] = useState('');
-    const [ Message, setMessage ] = useState('');
+    const [Name, setName] = useState('');
+    const [Email, setEmail] = useState('');
+    const [Message, setMessage] = useState('');
 
-    const ChangeName = (e:any) => {
-        setName(() => e.target.value);       
+    const ChangeName = (e: any) => {
+        setName(() => e.target.value);
     }
 
-    const ChangeEmail = (e:any) => {
-        setEmail(() => e.target.value);       
+    const ChangeEmail = (e: any) => {
+        setEmail(() => e.target.value);
     }
 
-    const ChangeMessage = (e:any) => {
-        setMessage(() => e.target.value);       
+    const ChangeMessage = (e: any) => {
+        setMessage(() => e.target.value);
     }
 
     const OnSubmit = (e: any) => {
         e.preventDefault();
-        let msg : ContactMessage = {
-            Name : Name,
+        let msg: ContactMessage = {
+            Name: Name,
             Email: Email,
             Message: Message,
             DataHora: new Date(Date.now())
@@ -40,9 +40,9 @@ const PageContacts = () => {
         setShow(() => true);
     }
 
-    const [ show, setShow ] = useState(false);
+    const [show, setShow] = useState(false);
 
-    const onClose = () =>{
+    const onClose = () => {
         setShow(() => false)
         ClearFields();
     }
@@ -57,8 +57,8 @@ const PageContacts = () => {
 
     return (
         <>
-         <div className='d-md-none'>
-            <PageTitle Image={PageContactsImg}>{Translate("Contacts.Titulo", false)}</PageTitle>
+            <div className='d-md-none'>
+                <PageTitle Image={PageContactsImg}>{Translate("Contacts.Titulo", false)}</PageTitle>
             </div>
             <div className="container px-2 my-2">
                 <div className="row justify-content-center">
