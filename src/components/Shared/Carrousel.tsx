@@ -1,4 +1,19 @@
+import { useState } from "react";
+import { ModalImage } from "./ModalImage";
+
 export const Carrousel = ({ Screenshots }: { Screenshots: string[] }) => {
+    const [Exibir, setExibir] = useState(false);
+    const [Msg, setMsg] = useState("");
+
+    const OnClose = () => {
+        setExibir(() => false)
+    }
+
+    const OnImageClick = (texto: string) => {
+        setMsg(() => texto);
+        setExibir(() => true);
+    }
+
     return (
         <>
             <div id="carousel" className="carousel carousel-dark slide">
@@ -7,7 +22,7 @@ export const Carrousel = ({ Screenshots }: { Screenshots: string[] }) => {
                         return (
                             <div key={screenshot} className={`carousel-item ${Indice == 0 ? 'active' : ''}`}>
                                 <div className="d-flex justify-content-center align-items-center">
-                                <img src={screenshot} style={{cursor: "pointer", height: "300px"}} className="img-fluid" alt={screenshot} />
+                                <img src={screenshot} style={{cursor: "pointer", height: "300px"}} className="img-fluid" alt={screenshot} onClick={() => OnImageClick(screenshot)} />
                                 </div>
                             </div>
                         )
@@ -21,7 +36,9 @@ export const Carrousel = ({ Screenshots }: { Screenshots: string[] }) => {
                     <span className="carousel-control-next-icon" aria-hidden="true"></span>
                     <span className="visually-hidden">Next</span>
                 </button>
-            </div>          
+            </div> 
+
+            <ModalImage Title='Exibindo screenshot' imgSRC={Msg} onClose={OnClose} show={Exibir} />         
         </>
     )
 }
