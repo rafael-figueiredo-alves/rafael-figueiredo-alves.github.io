@@ -1,18 +1,21 @@
-import { useContext, useEffect } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import PageToolsImg from '/src/assets/PageTitleImg/PageToolsImg.png'
 import { LanguageContext } from '../contexts/LanguageContext'
 import { PageTitle } from '../components/Shared/PageTitle'
 import { Tools } from '../models/Interfaces'
 import { ToolCard } from '../components/Shared/ToolCard'
 import { PageTitleContext, Pages } from '../contexts/PageTitleContext'
+import { GetDataFromJSONService } from '../services/GetDataFromJSONService'
 
 const PageTools = () => {
-    const { Translate } = useContext(LanguageContext)
+    const { CurrentLanguage, Translate } = useContext(LanguageContext)
     const { ChangePage } = useContext(PageTitleContext)
 
-    useEffect(() => ChangePage(Pages.Tools), [])
+    const [ToolsCollection, setToolsCollection] = useState<Tools[]>([])
 
-    let Teste: Tools[] = []; //[{ ToolImg: ToolImg.Access, Tool: "Teste do Componente", Description: "Teste da descrção que será carregada para  aferramenta em questão", Skills: ["Habilidade 1", "Habilidade 2"] }, { ToolImg: ToolImg.Access, Tool: "Teste do Componente", Description: "Teste da descrção que será carregada para  aferramenta em questão", Skills: ["Habilidade 1", "Habilidade 2"] }];
+    useEffect(() => { GetDataFromJSONService<Tools>('Tools', CurrentLanguage).then(data => setToolsCollection(() => data)) }, [CurrentLanguage])
+
+    useEffect(() => ChangePage(Pages.Tools), [])
 
     return (
         <>
@@ -22,7 +25,7 @@ const PageTools = () => {
 
             <div className="container">
                 <div className="row">
-                    {Teste.length > 0 ? Teste.map((Tool: Tools, Indice: number) => {
+                    {ToolsCollection.length > 0 ? ToolsCollection.map((Tool: Tools, Indice: number) => {
                         return <ToolCard key={Indice} Tool={Tool} />
                     }) : <p>Não foram encontradas ferramentas</p>}
                 </div>

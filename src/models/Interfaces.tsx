@@ -13,13 +13,6 @@ export interface iTranslation {
 //#endregion
 
 //#region Interface do Modelo da classe Projetos
-export interface iProjects{
-    Title: string,
-    Version: string,
-    Description: string,
-    Chip: ChipKind
-}
-
 export interface Projects{
     Title: string,
     Version: string,
@@ -151,7 +144,7 @@ export interface ContactMessage {
 
 //#region Interfaces das props do componente ProjectCard
 export interface ProjectCardProps {
-    Project: iProjects[],
+    Project: Projects[],
     Indice: number,
     BtnAnteriorClick: () => void,
     BtnProximoClick: () => void
