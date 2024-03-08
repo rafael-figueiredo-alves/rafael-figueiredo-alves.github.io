@@ -57,10 +57,10 @@ export const ProjectCard = (props: ProjectCardProps) => {
                         <p className="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt atque praesentium est possimus accusamus fuga aperiam voluptate dolor, non eaque delectus, inventore maiores consectetur cumque. Iusto in voluptatem blanditiis. Eum.</p>
                         <br />
                         <h5 className="card-title">Tecnologias</h5>
-                        <Chip Kind={props.Project[props.Indice].Chip} />
+                        <Chip Kind={props.Project[props.Indice].Technology[0]} />
                         <br /><br />
                         <h5 className="card-title">Plataformas</h5>
-                        <Chip Kind={props.Project[props.Indice].Chip} />
+                        <Chip Kind={props.Project[props.Indice].Platform[0]} />
                         <br /><br />
                         <h5 className="card-title">Prints</h5>
                         <Carrousel Screenshots={Teste}/>

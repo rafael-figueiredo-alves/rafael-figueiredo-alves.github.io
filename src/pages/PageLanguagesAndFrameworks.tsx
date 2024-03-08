@@ -22,9 +22,11 @@ const PageLanguagesAndFrameworks = () => {
         <div className='d-md-none'>
         <PageTitle Image={PageLanguagesImg}>{Translate("Languages.Titulo", false)}</PageTitle>
         </div>
-        {languagesFrameworks.length > 0 ? () => {
-            return <LanguageFrameworkCards Content={languagesFrameworks} />
-        } : <p>Não foram encontradas linguagens e/ou frameworks</p>}
+        {languagesFrameworks != null ? (languagesFrameworks.length <= 0 ?
+            <p>Não foram encontradas linguagens e/ou frameworks</p> :
+            <LanguageFrameworkCards Content={languagesFrameworks} />) :
+            <p>Não foram encontradas linguagens e/ou frameworks</p> 
+        }
 
         
         </>
