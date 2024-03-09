@@ -35,9 +35,9 @@ const PageProjects = () => {
         <PageTitle Image={PageProjectsImg}>{Translate("Projects.Titulo", false)}</PageTitle>
         </div>
 
-        {projects.length > 0 ? () => {
-            return <ProjectCard Project={projects} Indice={indice} BtnAnteriorClick={Anterior} BtnProximoClick={Proximo}/>
-        } : <p>Não foram encontrados Projetos</p>}
+        {projects != null ? (projects.length > 0 ?
+            <ProjectCard Project={projects} Indice={indice} BtnAnteriorClick={Anterior} BtnProximoClick={Proximo}/>
+         : <p>Não foram encontrados Projetos</p>) : <p>Não foram encontrados Projetos</p>}
         </>        
     )
 }
