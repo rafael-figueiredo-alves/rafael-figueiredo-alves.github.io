@@ -34,14 +34,26 @@ export const Translations = {
             "Titulo" : "Minha experiência e habilidades"
         },
         "Projects":{
-            "Titulo" : "Meus Projetos"
+            "Titulo" : "Meus Projetos",
+            "NotFound": "Não foram encontrados projetos para exibir.",
+            "Versao": "Versão",
+            "Descricao": "Descrição",
+            "GithubLink": "Link do projeto no Github",
+            "Tecnologias": "Tecnologias usadas",
+            "Plataformas": "Platformas",
+            "Screenshots": "Screenshots",
+            "Objetivos": "Objetivos",
+            "Marcas": "Palavras-chave",
+            "Downloads": "Downloads disponíveis"
         },
         "Tools":{
-            "Titulo" : "Ferramentas que eu uso"
+            "Titulo" : "Ferramentas que eu uso",
+            "NotFound": "Não foram encontradas informações sobre as ferramentas que uso para exibir."
         },
         "Languages":{
             "Titulo" : "Linguagens e Frameworks",
-            "Skills" : "Habilidades:"
+            "Skills" : "Habilidades:",
+            "NotFound": "Não foram encontradas informações das linguagens e frameworks para exibir."
         },
         "UI-Elements":{
             "BtnAnterior" : "Anterior",
@@ -106,14 +118,26 @@ export const Translations = {
             "Titulo" : "My experience and skills"
         },
         "Projects":{
-            "Titulo" : "My Projects"
+            "Titulo" : "My Projects",
+            "NotFound": "No projects were found.",
+            "Versao": "Version",
+            "Descricao": "Description",
+            "GithubLink": "Link to Project in Github",
+            "Tecnologias": "Used Technologies",
+            "Plataformas": "Platforms",
+            "Screenshots": "Screenshots",
+            "Objetivos": "Goals",
+            "Downloads": "Available Downloads",
+            "Marcas": "Keywords"
         },
         "Tools":{
-            "Titulo" : "Tools I use"
+            "Titulo" : "Tools I use",
+            "NotFound": "No tools were found."
         },
         "Languages":{
             "Titulo" : "Languages and Frameworks",
-            "Skills" : "Skills:"
+            "Skills" : "Skills:",
+            "NotFound": "No Languages/Frameworks were found."
         },
         "UI-Elements":{
             "BtnAnterior" : "Previous",

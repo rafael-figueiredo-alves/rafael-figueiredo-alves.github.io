@@ -25,9 +25,10 @@ const PageTools = () => {
 
             <div className="container">
                 <div className="row">
-                    {ToolsCollection.length > 0 ? ToolsCollection.map((Tool: Tools, Indice: number) => {
+                    {ToolsCollection != null ?
+                    (ToolsCollection.length > 0 ? ToolsCollection.map((Tool: Tools, Indice: number) => {
                         return <ToolCard key={Indice} Tool={Tool} />
-                    }) : <p>Não foram encontradas ferramentas</p>}
+                    }) : <p>{Translate("Tools.NotFound", false)}</p>) : <p>{Translate("Tools.NotFound", false)}</p>}
                 </div>
             </div>
         </>

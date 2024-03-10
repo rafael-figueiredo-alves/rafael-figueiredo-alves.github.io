@@ -2,14 +2,16 @@ import '/src/components/Shared/DownloadButton/DownloadButton.css'
 import { DownloadTipo } from "../../../models/Interfaces";
 import { useContext } from 'react';
 import { LanguageContext } from '../../../contexts/LanguageContext';
+import { useNavigate } from 'react-router-dom';
 
-export const DownloadButton = ({Tipo}:{Tipo: DownloadTipo}) => {
+export const DownloadButton = ({Tipo, Link}:{Tipo: DownloadTipo, Link: string}) => {
     const { Translate } = useContext(LanguageContext);
+    const Navigate = useNavigate();
 
     switch(Tipo) {
         case DownloadTipo.AndroidAPK:
             return(
-                <button className="btn btn-primary btnNormal m-1">
+                <button className="btn btn-primary btnNormal m-1" onClick={() => Navigate(Link)}>
                     <svg className="me-2" fill="#ffffff" height="32px" width="32px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                         <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                         <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
@@ -24,7 +26,7 @@ export const DownloadButton = ({Tipo}:{Tipo: DownloadTipo}) => {
             );
         case DownloadTipo.WindowsExe:
             return(
-                <button className="btn btn-primary btnNormal m-1">
+                <button className="btn btn-primary btnNormal m-1" onClick={() => Navigate(Link)}>
                 <svg className="me-2" width={32} height={32} xmlns="http://www.w3.org/2000/svg" fill="#ffffff" viewBox="0 0 24 24" stroke="#ffffff">
                     <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                     <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
@@ -37,7 +39,7 @@ export const DownloadButton = ({Tipo}:{Tipo: DownloadTipo}) => {
             );
         case DownloadTipo.LibZip:
             return(
-                <button className="btn btn-primary btnNormal m-1">
+                <button className="btn btn-primary btnNormal m-1" onClick={() => Navigate(Link)}>
                 <svg fill="#ffffff" className="me-2" height={32} width={32} version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 550.801 550.801" stroke="#ffffff">
                     <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                     <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
@@ -54,7 +56,7 @@ export const DownloadButton = ({Tipo}:{Tipo: DownloadTipo}) => {
             );
         case DownloadTipo.NuGet:
             return(
-                <button className="btn btn-primary btnNormal m-1">
+                <button className="btn btn-primary btnNormal m-1" onClick={() => Navigate(Link)}>
                 <svg className="me-2" height={32} width={32} viewBox="0 0 76 76" xmlns="http://www.w3.org/2000/svg"  version="1.1" baseProfile="full" enableBackground="new 0 0 76.00 76.00" fill="#ffffff" stroke="#ffffff">
                     <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                     <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
@@ -67,7 +69,7 @@ export const DownloadButton = ({Tipo}:{Tipo: DownloadTipo}) => {
             );
         case DownloadTipo.SourceCodeZip:
             return(
-                <button className="btn btn-primary btnNormal m-1">
+                <button className="btn btn-primary btnNormal m-1" onClick={() => Navigate(Link)}>
                 <svg viewBox="0 0 24 24" className="me-2" height={32} width={32} fill="none" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
                     <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                     <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
@@ -82,7 +84,7 @@ export const DownloadButton = ({Tipo}:{Tipo: DownloadTipo}) => {
             );
         case DownloadTipo.NPM:
             return(
-                <button className="btn btn-primary btnNormal m-1">
+                <button className="btn btn-primary btnNormal m-1" onClick={() => Navigate(Link)}>
                 <svg fill="#ffffff" className="me-2" height={32} width={32} viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" stroke="#ffffff">
                     <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                     <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>
@@ -95,7 +97,7 @@ export const DownloadButton = ({Tipo}:{Tipo: DownloadTipo}) => {
             );            
         case DownloadTipo.Site:
             return(
-                <button className="btn btn-primary btnNormal m-1">
+                <button className="btn btn-primary btnNormal m-1" onClick={() => Navigate(Link)}>
                 <svg fill="#ffffff" className="me-2" height="32px" width="32px" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 490 490">
                     <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                     <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g>

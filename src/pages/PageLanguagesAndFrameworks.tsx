@@ -23,9 +23,9 @@ const PageLanguagesAndFrameworks = () => {
         <PageTitle Image={PageLanguagesImg}>{Translate("Languages.Titulo", false)}</PageTitle>
         </div>
         {languagesFrameworks != null ? (languagesFrameworks.length <= 0 ?
-            <p>Não foram encontradas linguagens e/ou frameworks</p> :
+            <p>{Translate("Languages.NotFound", false)}</p> :
             <LanguageFrameworkCards Content={languagesFrameworks} />) :
-            <p>Não foram encontradas linguagens e/ou frameworks</p> 
+            <p>{Translate("Languages.NotFound", false)}</p> 
         }
 
         

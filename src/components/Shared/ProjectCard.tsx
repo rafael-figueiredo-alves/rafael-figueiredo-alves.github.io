@@ -6,18 +6,19 @@ import BtnNext from '/src/assets/UI/BtnNext.png';
 //#region Imports
 import { useContext } from "react";
 import { LanguageContext } from "../../contexts/LanguageContext";
-import { DownloadTipo, ProjectCardProps, ProjectKind } from "../../models/Interfaces";
+import { ChipKind, DownloadLink, ProjectCardProps, ProjectKind } from "../../models/Interfaces";
 import { Chip } from "./Chip/Chip";
 import { Carrousel } from "./Carrousel";
 import { ProjectKindBadge } from './ProjectKindBadges/ProjectKindBadge';
 import { DownloadButton } from './DownloadButton/DownloadButton';
 import { Tags } from './Tags';
+import { RenderHTML } from '../../utils/Functions';
+import { GoalsList } from './GoalsList';
 //#endregion
 
 export const ProjectCard = (props: ProjectCardProps) => {
     const { Translate } = useContext(LanguageContext);
 
-    const Teste: string[] = ["https://raw.githubusercontent.com/rafael-figueiredo-alves/eTasks/v2.0/assets/Screens/Conceitual_Mobile_Home_Light.png", "https://raw.githubusercontent.com/rafael-figueiredo-alves/eTasks/v2.0/assets/Screens/Conceitual_Mobile_Home_Dark.png"];
     let marcas: string[] = ["Delphi","Portfolio","C Sharp","Flutter","Firebase","Sitema de vendas","Praticando","Delphi","Portfolio","C Sharp","Flutter","Firebase","Sitema de vendas","Praticando","Delphi","Portfolio","C Sharp","Flutter","Firebase","Sitema de vendas","Praticando"];
 
     return (
@@ -42,29 +43,56 @@ export const ProjectCard = (props: ProjectCardProps) => {
                         </div>
                     </div>
                     <div className="card-body">
-                        <h5 className="card-title">Versão</h5>
+                        <h5 className="card-title">{Translate("Projects.Versao", false)}</h5>
                         <div className='row'>
                             <div className='col-6 text-start'>
-                                1.0.0
+                                {props.Project[props.Indice].Version}
                             </div>
                             <div className='col-6 text-end'>
-                                <ProjectKindBadge Kind={ProjectKind.DesktopApp} />
-                                <ProjectKindBadge Kind={ProjectKind.MobileApp} />
-                                <ProjectKindBadge Kind={ProjectKind.API} />
+                                {props.Project[props.Indice].Kind.length > 0 && (
+                                    props.Project[props.Indice].Kind.map((PrjKind: ProjectKind) => {
+                                        return <ProjectKindBadge Kind={PrjKind} />
+                                    })
+                                )}
                             </div>
                         </div>
-                        <h5 className="card-title">Descrição</h5>
-                        <p className="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt atque praesentium est possimus accusamus fuga aperiam voluptate dolor, non eaque delectus, inventore maiores consectetur cumque. Iusto in voluptatem blanditiis. Eum.</p>
+                        <h5 className="card-title">{Translate("Projects.GithubLink", false)}</h5>
+                        <a href={props.Project[props.Indice].GithubLink}>{props.Project[props.Indice].GithubLink}</a>
+                        <h5 className="card-title">{Translate("Projects.Descricao", false)}</h5>
+                        <p className="card-text">{RenderHTML(props.Project[props.Indice].Description)}</p>
                         <br />
-                        <h5 className="card-title">Tecnologias</h5>
-                        <Chip Kind={props.Project[props.Indice].Technology[0]} />
+                        <h5 className="card-title">{Translate("Projects.Objetivos", false)}</h5>
+                        {props.Project[props.Indice].Goals != null && props.Project[props.Indice].Goals.length > 0 && (
+                                    <GoalsList Goals={props.Project[props.Indice].Goals} />)
+                        } 
+                        <br/>
+                        <h5 className="card-title">{Translate("Projects.Tecnologias", false)}</h5>
+                        {props.Project[props.Indice].Technology.length > 0 && (
+                                    props.Project[props.Indice].Technology.map((Technology: ChipKind) => {
+                                        return <Chip Kind={Technology} />
+                                    })
+                                )} 
                         <br /><br />
-                        <h5 className="card-title">Plataformas</h5>
-                        <Chip Kind={props.Project[props.Indice].Platform[0]} />
+                        <h5 className="card-title">{Translate("Projects.Plataformas", false)}</h5>
+                        {props.Project[props.Indice].Platform.length > 0 && (
+                                    props.Project[props.Indice].Platform.map((Platform: ChipKind) => {
+                                        return <Chip Kind={Platform} />
+                                    })
+                                )} 
                         <br /><br />
-                        <h5 className="card-title">Prints</h5>
-                        <Carrousel Screenshots={Teste}/>
-                        <DownloadButton Tipo={DownloadTipo.AndroidAPK} />
+                        <h5 className="card-title">{Translate("Projects.Screenshots", false)}</h5>
+                        {props.Project[props.Indice].Screenshots != null && props.Project[props.Indice].Screenshots.length > 0 && (
+                                    <Carrousel Screenshots={props.Project[props.Indice].Screenshots} />)
+                        } 
+                        <br /><br />
+                        <h5 className="card-title">{Translate("Projects.Downloads", false)}</h5>
+                        {props.Project[props.Indice].DownloadLink != null && props.Project[props.Indice].DownloadLink.length > 0 && (
+                                    props.Project[props.Indice].DownloadLink.map((DownLink: DownloadLink) => {
+                                        return <DownloadButton Tipo={DownLink.Tipo} Link={DownLink.Link} />
+                                    })
+                                )} 
+                        
+                        <h5 className="card-title">{Translate("Projects.Marcas", false)}</h5>
                         <Tags TagList={marcas} />
                     </div>
                 </div>
