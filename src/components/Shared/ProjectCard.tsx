@@ -19,8 +19,6 @@ import { GoalsList } from './GoalsList';
 export const ProjectCard = (props: ProjectCardProps) => {
     const { Translate } = useContext(LanguageContext);
 
-    let marcas: string[] = ["Delphi","Portfolio","C Sharp","Flutter","Firebase","Sitema de vendas","Praticando","Delphi","Portfolio","C Sharp","Flutter","Firebase","Sitema de vendas","Praticando","Delphi","Portfolio","C Sharp","Flutter","Firebase","Sitema de vendas","Praticando"];
-
     return (
         <>
             <div className="container-fluid" style={{padding: '0px'}}>
@@ -85,15 +83,24 @@ export const ProjectCard = (props: ProjectCardProps) => {
                                     <Carrousel Screenshots={props.Project[props.Indice].Screenshots} />)
                         } 
                         <br /><br />
+                        <h5 className="card-title">{Translate("Projects.Marcas", false)}</h5>
+                        {props.Project[props.Indice].Tags != null && props.Project[props.Indice].Tags.length > 0 && (
+                                    <Tags TagList={props.Project[props.Indice].Tags} />
+                                )} 
+                        <br/><br/>
                         <h5 className="card-title">{Translate("Projects.Downloads", false)}</h5>
                         {props.Project[props.Indice].DownloadLink != null && props.Project[props.Indice].DownloadLink.length > 0 && (
                                     props.Project[props.Indice].DownloadLink.map((DownLink: DownloadLink) => {
                                         return <DownloadButton Tipo={DownLink.Tipo} Link={DownLink.Link} />
                                     })
                                 )} 
-                        
-                        <h5 className="card-title">{Translate("Projects.Marcas", false)}</h5>
-                        <Tags TagList={marcas} />
+                        <br/><br/>
+                        {props.Project[props.Indice].Site != null && props.Project[props.Indice].Site != "" && (
+                            <>
+                        <h5 className="card-title">{Translate("Projects.Site", false)}</h5>
+                        <a href={props.Project[props.Indice].Site}>{props.Project[props.Indice].Site}</a>
+                        </>
+                        )}
                     </div>
                 </div>
             </div>

@@ -44,7 +44,8 @@ export const Translations = {
             "Screenshots": "Screenshots",
             "Objetivos": "Objetivos",
             "Marcas": "Palavras-chave",
-            "Downloads": "Downloads disponíveis"
+            "Downloads": "Downloads disponíveis",
+            "Site": "Página do Projeto"
         },
         "Tools":{
             "Titulo" : "Ferramentas que eu uso",
@@ -128,7 +129,8 @@ export const Translations = {
             "Screenshots": "Screenshots",
             "Objetivos": "Goals",
             "Downloads": "Available Downloads",
-            "Marcas": "Keywords"
+            "Marcas": "Keywords",
+            "Site": "Project's homepage"
         },
         "Tools":{
             "Titulo" : "Tools I use",
