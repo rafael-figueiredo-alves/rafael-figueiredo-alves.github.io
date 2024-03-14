@@ -27,6 +27,7 @@ const PageLanguagesAndFrameworks = () => {
             <LanguageFrameworkCards Content={languagesFrameworks} />) :
             <p>{Translate("Languages.NotFound", false)}</p> 
         }
+        <br />
 
         
         </>
