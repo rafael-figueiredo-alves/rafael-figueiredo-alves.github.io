@@ -1,0 +1,13 @@
+/* Estilize os botões de navegação do carrossel */
+.carousel-control-prev,
+.carousel-control-next {
+    background-color: #ffffff; /* Cor de fundo */
+    border: 1px solid #000000; /* Borda */
+    color: #000000; /* Cor do texto */
+}
+
+/* Estilize os ícones dos botões */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: #000000; /* Cor do ícone */
+}

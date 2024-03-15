@@ -55,10 +55,10 @@ export const ProjectCard = (props: ProjectCardProps) => {
                             </div>
                         </div>
                         <h5 className="card-title">{Translate("Projects.GithubLink", false)}</h5>
-                        <a href={props.Project[props.Indice].GithubLink}>{props.Project[props.Indice].GithubLink}</a>
-                        <h5 className="card-title">{Translate("Projects.Descricao", false)}</h5>
-                        <p className="card-text">{RenderHTML(props.Project[props.Indice].Description)}</p>
+                        <a className='mb-1' href={props.Project[props.Indice].GithubLink}>{props.Project[props.Indice].GithubLink}</a>
                         <br />
+                        <h5 className="card-title">{Translate("Projects.Descricao", false)}</h5>
+                        <p className="card-text className='mb-1'">{RenderHTML(props.Project[props.Indice].Description)}</p>
                         <h5 className="card-title">{Translate("Projects.Objetivos", false)}</h5>
                         {props.Project[props.Indice].Goals != null && props.Project[props.Indice].Goals.length > 0 && (
                                     <GoalsList Goals={props.Project[props.Indice].Goals} />)

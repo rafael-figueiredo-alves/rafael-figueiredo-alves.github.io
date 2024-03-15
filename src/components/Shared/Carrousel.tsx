@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { ModalImage } from "./ModalImage";
+import '/src/components/Shared/Carrousel.css';
 
 export const Carrousel = ({ Screenshots }: { Screenshots: string[] }) => {
     const [Exibir, setExibir] = useState(false);
