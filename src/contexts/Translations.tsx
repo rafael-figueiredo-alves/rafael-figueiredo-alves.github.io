@@ -37,7 +37,16 @@ export const Translations = {
             "MsgBody": "Muito obrigado por sua mensagem. Logo que possível, estarei lendo e respondendo ela."
         },
         "Experience":{
-            "Titulo" : "Minha experiência e habilidades"
+            "Titulo" : "Minha experiência e habilidades",
+            "Abilities": "Habilidades e/ou Destaques",
+            "RzCargo": "<strong>Cargo: </strong>Programador<br />",
+            "RzPeriodo": "<strong>Período: </strong>Fev/2022 - Atual<br />",
+            "RzAtividades": "<strong>Atividades executadas: </strong>Manutenção de aplicativos legados Delphi como ERP, Cobs e até CAD para confecção. Trabalho com integrações como Inter, Shopify, Wake e outras. Também experiência em rotinas fiscais SPED e integração com MDFe. Desenvolvimento de software em Blazor e C#, tanto front-end como backend.",
+            "RzAbilityTitle1": "Habilidades de código",
+            "RzAbilityTitle2": "Habilidades de Design e Projeto",
+            "CCAACargo": "<strong>Cargo: </strong>Programador<br />",
+            "CCAAPeriodo": "<strong>Período: </strong>Fev/2022 - Atual<br />",
+            "CCAAAtividades": "<strong>Atividades executadas: </strong>Manutenção de aplicativos legados Delphi como ERP, Cobs e até CAD para confecção. Trabalho com integrações como Inter, Shopify, Wake e outras. Também experiência em rotinas fiscais SPED e integração com MDFe. Desenvolvimento de software em Blazor e C#, tanto front-end como backend.",
         },
         "Projects":{
             "Titulo" : "Meus Projetos",
@@ -128,7 +137,16 @@ export const Translations = {
             "MsgBody": "Thanks for your message. As soon as possible, I'll be reading and anwsering it."
         },
         "Experience":{
-            "Titulo" : "My experience and skills"
+            "Titulo" : "My experience and skills",
+            "Abilities": "Abilities and/or Highlights",
+            "RzCargo": "<strong>Ocupation: </strong>Programmmer<br />",
+            "RzPeriodo": "<strong>Working: </strong>From Feb/2022 - Current date<br />",
+            "RzAtividades": "<strong>Everyday Activities: </strong>Maintanence to Legacy Delphi Applications like ERP, Cobs and even a CAD software for fashion industry. I work with integrations like Inter, Shopify, Wake and others. I also have experience with SPED and MDFe integration. Development of software in Blazor and C#, both for front-end and backend apps.",
+            "RzAbilityTitle1": "Coding ability",
+            "RzAbilityTitle2": "Desing and Project abilities",
+            "CCAACargo": "<strong>Ocupation: </strong>Programmmer<br />",
+            "CCAAPeriodo": "<strong>Working: </strong>From Feb/2022 - Current date<br />",
+            "CCAAAtividades": "<strong>Everyday Activities: </strong>Maintanence to Legacy Delphi Applications like ERP, Cobs and even a CAD software for fashion industry. I work with integrations like Inter, Shopify, Wake and others. I also have experience with SPED and MDFe integration. Development of software in Blazor and C#, both for front-end and backend apps.",
         },
         "Projects":{
             "Titulo" : "My Projects",
