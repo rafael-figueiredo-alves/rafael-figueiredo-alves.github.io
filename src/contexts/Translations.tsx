@@ -44,9 +44,34 @@ export const Translations = {
             "RzAtividades": "<strong>Atividades executadas: </strong>Manutenção de aplicativos legados Delphi como ERP, Cobs e até CAD para confecção. Trabalho com integrações como Inter, Shopify, Wake e outras. Também experiência em rotinas fiscais SPED e integração com MDFe. Desenvolvimento de software em Blazor e C#, tanto front-end como backend.",
             "RzAbilityTitle1": "Habilidades de código",
             "RzAbilityTitle2": "Habilidades de Design e Projeto",
-            "CCAACargo": "<strong>Cargo: </strong>Programador<br />",
-            "CCAAPeriodo": "<strong>Período: </strong>Fev/2022 - Atual<br />",
-            "CCAAAtividades": "<strong>Atividades executadas: </strong>Manutenção de aplicativos legados Delphi como ERP, Cobs e até CAD para confecção. Trabalho com integrações como Inter, Shopify, Wake e outras. Também experiência em rotinas fiscais SPED e integração com MDFe. Desenvolvimento de software em Blazor e C#, tanto front-end como backend.",
+            "RzAbilityTitle3": "Crescimento em Equipe",
+            "RzAbilityTitle4": "Softwares para todas as necessidades",
+            "RzAbilityTitle5": "Trabalhando com integrações",
+            "CCAACargo": "<strong>Cargo: </strong>Professor de Inglês/Coordenador<br />",
+            "CCAAPeriodo": "<strong>Período: </strong>Jan/2008 - Dez/2021<br />",
+            "CCAAAtividades": "<strong>Atividades executadas: </strong>Lecionei inglês para mais de mil alunos de todos os níveis e idades, utilizando sempre uma abordagem comunicativa. Estive envolvido em atividades extra classe como festas e eventos. Como coordenador, organizei todos os dados da escola de forma a gerenciar melhor os alunos e professores e acompanhar lançamento de presenças e faltas e suas devidas justificativas. Durante o tempo que trabalhei também desenvolvi software para automatizar relatório de aproveitamento enviado aos alunos (eRAMs), bem como uma série de controles em Excel para gerenciamento das unidades do grupo.",
+            "CCAAAbilityTitle1": "Aulas de Inglês",
+            "CCAAAbilityTitle2": "Metodologia Exclusiva",
+            "CCAAAbilityTitle3": "Aulas nas Unidades, em escolas e Remotas",
+            "CCAAAbilityTitle4": "Gerência de controles",
+            "RzAbilityDescription1" : 
+                "Trabalhando todos os dias com código, tenho aprendido muito sobre boas práticas e escrevendo milhares de linhas em Delphi e C#.",
+            "RzAbilityDescription2" : 
+                "Uma habilidade muito importante hoje é saber desenhar e prototipar sistema e suas funcionalidades, e é o que faço todos os dias no trabalho e na prática diária no tempo livre.",
+            "RzAbilityDescription3" : 
+                "Trabalhar em equipe proporciona uma oportunidade incrível de crescimento para todos, o que aprende e o que ensina, e você sempre muda de posição, sendo professor em alguns momentos, e alunos em outros.",
+            "RzAbilityDescription4" : 
+                "Desenvolvendo ERP, Cobs, CADs para confecções e diversos outros softwares para os mais variados perfis de clientes, sempre tendo a necessidade deles como prioridade.",
+            "RzAbilityDescription5" : 
+                "Integração com APIs hoje é algo essencial, e, após já trabalhar com integrações com a Wake, Shopify, NuvemShop e Inter, penso qual será a próxima.",
+            "CCAAAbilityDescription1" : 
+                "Lecionei aulas da língua inglesa para alunos de todos os níveis e idades, sempre tendo em foco desenvolver o falante completo em suas 4 habilidades: ouvir, falar, escrever e ler.",
+            "CCAAAbilityDescription2" : 
+                "Usando uma metodologia exclusiva do CCAA e também desenvolvida numa jornada de 15 anos como professor, o foco é protagonizar o aluno e trabalhar sempre com a comunicação como foco.",
+            "CCAAAbilityDescription3" : 
+                "Já lecionei tanto dentro das unidades do CCAA do grupo ABC, como também em escolas conveniadas e também remotas durante a pandemia e após a mesma.",            
+            "CCAAAbilityDescription4" : 
+                "Criação de controles e softwares específicos para atender as necessidades de professores, diretores e alunos, mantendo toda informação centralizada e organizada para a rápida tomada de decisão acertiva."
         },
         "Projects":{
             "Titulo" : "Meus Projetos",
@@ -144,9 +169,34 @@ export const Translations = {
             "RzAtividades": "<strong>Everyday Activities: </strong>Maintanence to Legacy Delphi Applications like ERP, Cobs and even a CAD software for fashion industry. I work with integrations like Inter, Shopify, Wake and others. I also have experience with SPED and MDFe integration. Development of software in Blazor and C#, both for front-end and backend apps.",
             "RzAbilityTitle1": "Coding ability",
             "RzAbilityTitle2": "Desing and Project abilities",
-            "CCAACargo": "<strong>Ocupation: </strong>Programmmer<br />",
-            "CCAAPeriodo": "<strong>Working: </strong>From Feb/2022 - Current date<br />",
-            "CCAAAtividades": "<strong>Everyday Activities: </strong>Maintanence to Legacy Delphi Applications like ERP, Cobs and even a CAD software for fashion industry. I work with integrations like Inter, Shopify, Wake and others. I also have experience with SPED and MDFe integration. Development of software in Blazor and C#, both for front-end and backend apps.",
+            "RzAbilityTitle3": "Team Growth",
+            "RzAbilityTitle4": "Software for every need",
+            "RzAbilityTitle5": "Working with Integrations",
+            "CCAACargo": "<strong>Ocupation: </strong>English teacher/Coordinator<br />",
+            "CCAAPeriodo": "<strong>Working: </strong>From Jan/2008 to Dec/2021<br />",
+            "CCAAAtividades": "<strong>Everyday Activities: </strong>I taught English for over a thousand students from all levels, ages and walks of life, always using a Communicative approach. I was involved in extra-class activities like parties and events. As coordinator, I was in charge of organizing all school data to manage students and teachers in a better way and I also followed presence cards and absences and their respective reasons. From the time I worked, I also developed software to automize performance reports sent to students (eRAMs), as well as a series of Excel spreadsheets to manage data from the company's branches.",
+            "CCAAAbilityTitle1": "English classes",
+            "CCAAAbilityTitle2": "Exclusive methodology",
+            "CCAAAbilityTitle3": "Classes at branches, shools and remote",
+            "CCAAAbilityTitle4": "Controls to manage students and teachers",
+            "RzAbilityDescription1" : 
+                "Working every day with coding, I've learned a lot about programming best practices and I've written thounsand of lines in Delphi and C# every day.",
+            "RzAbilityDescription2" : 
+                "Designing and Prototyping softwares and their functions are really important abilities these days, and that's what I do on a daily-basis at work and on my free time.",
+            "RzAbilityDescription3" : 
+                "Teamwork gives you an opportunity of growth for everyone, both the one who learns and the one who teaches, and you always change your point of view, because today you're a student and tomorrow you are the teacher.",
+            "RzAbilityDescription4" : 
+                "Developing ERP, Cobs, CADs for fashion industries and many other pieces of software for a large variety of clients, always keeping their needs in mind.",
+            "RzAbilityDescription5" : 
+                "API Integration today is essential and, after being involved in integrations with Wake, Shopify, NuvemShop and Inter, I think which will be the next.",
+            "CCAAAbilityDescription1" : 
+                "I taught English to students from all ages and levels, always keeping in mind the goal to develop the English-speaking speaker's four skills: Listening, Speaking, Writing and Reading.",
+            "CCAAAbilityDescription2" : 
+                "Using the exclusive CCAA's methodology and also an approach I developed on my job jorney in 15 years, the focus is to lead the student and always work with communication as a focus.",
+            "CCAAAbilityDescription3" : 
+                "I taught both inside CCAA's branches from Grupo ABC, as well as schools that adopted our methodology and also remote classes throughout the pandemy and after it.",            
+            "CCAAAbilityDescription4" : 
+                "Creation of Excel controls and specific softwares to attend the needs of teachers, principals and students, keeping information centralized and organized to take the fastest and best decision."
         },
         "Projects":{
             "Titulo" : "My Projects",
