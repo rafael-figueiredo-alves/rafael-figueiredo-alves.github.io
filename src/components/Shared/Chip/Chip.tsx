@@ -200,8 +200,11 @@ export const Chip = (props: ChipProps) => {
             case ChipKind.Windows:
                 Texto = 'Windows';
                 break;
+            case ChipKind.Web:
+                    Texto = 'Web';
+                    break;                
             default:
-                Texto = Multiplatform;
+                Texto = "Multi-platform";
         };
 
         return Texto;
