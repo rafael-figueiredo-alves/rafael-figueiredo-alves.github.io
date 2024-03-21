@@ -21,7 +21,7 @@ export const ProjectCard = (props: ProjectCardProps) => {
 
     return (
         <>
-            <div className="container-fluid" style={{padding: '0px'}}>
+            <div className="container-fluid" style={{ padding: '0px' }}>
                 <div className="card">
                     <div className="card-header">
                         <div className="row">
@@ -59,47 +59,67 @@ export const ProjectCard = (props: ProjectCardProps) => {
                         <br />
                         <h5 className="card-title">{Translate("Projects.Descricao", false)}</h5>
                         <p className="card-text className='mb-1'">{RenderHTML(props.Project[props.Indice].Description)}</p>
-                        <h5 className="card-title">{Translate("Projects.Objetivos", false)}</h5>
+
                         {props.Project[props.Indice].Goals != null && props.Project[props.Indice].Goals.length > 0 && (
-                                    <GoalsList Goals={props.Project[props.Indice].Goals} />)
-                        } 
-                        <br/>
-                        <h5 className="card-title">{Translate("Projects.Tecnologias", false)}</h5>
+                            <>
+                                <h5 className="card-title">{Translate("Projects.Objetivos", false)}</h5>
+                                <GoalsList Goals={props.Project[props.Indice].Goals} />
+                            </>
+                        )
+                        }
+                        <br />
+
                         {props.Project[props.Indice].Technology.length > 0 && (
-                                    props.Project[props.Indice].Technology.map((Technology: ChipKind) => {
-                                        return <Chip Kind={Technology} />
-                                    })
-                                )} 
+                            <>
+                                <h5 className="card-title">{Translate("Projects.Tecnologias", false)}</h5>
+                                {props.Project[props.Indice].Technology.map((Technology: ChipKind) => {
+                                    return <Chip Kind={Technology} />
+                                })}
+                            </>
+                        )}
                         <br /><br />
-                        <h5 className="card-title">{Translate("Projects.Plataformas", false)}</h5>
+
                         {props.Project[props.Indice].Platform.length > 0 && (
-                                    props.Project[props.Indice].Platform.map((Platform: ChipKind) => {
-                                        return <Chip Kind={Platform} />
-                                    })
-                                )} 
+                            <>
+                                <h5 className="card-title">{Translate("Projects.Plataformas", false)}</h5>
+                                {props.Project[props.Indice].Platform.map((Platform: ChipKind) => {
+                                    return <Chip Kind={Platform} />
+                                })}
+                            </>
+
+                        )}
                         <br /><br />
-                        <h5 className="card-title">{Translate("Projects.Screenshots", false)}</h5>
+
                         {props.Project[props.Indice].Screenshots != null && props.Project[props.Indice].Screenshots.length > 0 && (
-                                    <Carrousel Screenshots={props.Project[props.Indice].Screenshots} />)
-                        } 
+                            <>
+                                <h5 className="card-title">{Translate("Projects.Screenshots", false)}</h5>
+                                <Carrousel Screenshots={props.Project[props.Indice].Screenshots} />
+                            </>
+                        )
+                        }
                         <br /><br />
-                        <h5 className="card-title">{Translate("Projects.Marcas", false)}</h5>
                         {props.Project[props.Indice].Tags != null && props.Project[props.Indice].Tags.length > 0 && (
-                                    <Tags TagList={props.Project[props.Indice].Tags} />
-                                )} 
-                        <br/><br/>
-                        <h5 className="card-title">{Translate("Projects.Downloads", false)}</h5>
+                            <>
+                                <h5 className="card-title">{Translate("Projects.Marcas", false)}</h5>
+                                <Tags TagList={props.Project[props.Indice].Tags} />
+                            </>
+                        )}
+                        <br /><br />
+
                         {props.Project[props.Indice].DownloadLink != null && props.Project[props.Indice].DownloadLink.length > 0 && (
-                                    props.Project[props.Indice].DownloadLink.map((DownLink: DownloadLink) => {
-                                        return <DownloadButton Tipo={DownLink.Tipo} Link={DownLink.Link} />
-                                    })
-                                )} 
-                        <br/><br/>
+                            <>
+                                <h5 className="card-title">{Translate("Projects.Downloads", false)}</h5>
+                                {props.Project[props.Indice].DownloadLink.map((DownLink: DownloadLink) => {
+                                    return <DownloadButton Tipo={DownLink.Tipo} Link={DownLink.Link} />
+                                })}
+                            </>
+                        )}
+                        <br /><br />
                         {props.Project[props.Indice].Site != null && props.Project[props.Indice].Site != "" && (
                             <>
-                        <h5 className="card-title">{Translate("Projects.Site", false)}</h5>
-                        <a href={props.Project[props.Indice].Site}>{props.Project[props.Indice].Site}</a>
-                        </>
+                                <h5 className="card-title">{Translate("Projects.Site", false)}</h5>
+                                <a href={props.Project[props.Indice].Site}>{props.Project[props.Indice].Site}</a>
+                            </>
                         )}
                     </div>
                 </div>

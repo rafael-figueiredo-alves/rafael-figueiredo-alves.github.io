@@ -38,6 +38,7 @@ const PageProjects = () => {
         {projects != null ? (projects.length > 0 ?
             <ProjectCard Project={projects} Indice={indice} BtnAnteriorClick={Anterior} BtnProximoClick={Proximo}/>
          : <p>{Translate("Projects.NotFound", false)}</p>) : <p>{Translate("Projects.NotFound", false)}</p>}
+         <br />
         </>        
     )
 }
